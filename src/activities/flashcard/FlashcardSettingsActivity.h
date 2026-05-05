@@ -9,6 +9,7 @@ class FlashcardSettingsActivity final : public Activity {
 
     uint8_t newPerDay = 10;
     uint8_t maxReview = 250;
+    uint8_t fontSizeIndex = 1;  // 0=Small 1=Medium 2=Large 3=XLarge
 
     void saveSettings();
 
