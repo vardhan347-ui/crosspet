@@ -27,6 +27,7 @@ bool CrossPetSettings::saveToFile() const {
   doc["appFlashcard"] = appFlashcard;
   doc["flashcardNewPerDay"] = flashcardNewPerDay;
   doc["flashcardMaxReviewPerDay"] = flashcardMaxReviewPerDay;
+  doc["flashcardFontSize"] = flashcardFontSize;
 
   String json;
   serializeJson(doc, json);
@@ -35,6 +36,69 @@ bool CrossPetSettings::saveToFile() const {
     LOG_DBG("CPS", "CrossPet settings saved");
   } else {
     LOG_ERR("CPS", "Failed to save CrossPet settings");
+  }
+  return ok;
+}
+
+bool CrossPetSettings::loadFromFile() {
+  // Primary: load from crosspet.json
+  if (Storage.exists(SETTINGS_PATH)) {
+    String json = Storage.readFile(SETTINGS_PATH);
+    if (!json.isEmpty()) {
+      JsonDocument doc;
+      auto error = deserializeJson(doc, json);
+      if (error) {
+        LOG_ERR("CPS", "CrossPet settings JSON parse error: %s", error.c_str());
+        return false;
+      }
+      homeFocusMode = doc["homeFocusMode"] | (uint8_t)0;
+
+      if (doc.containsKey("appClock"))
+        appClock = doc["appClock"].as<uint8_t>();
+      else if (doc.containsKey("homeShowClock"))
+        appClock = doc["homeShowClock"].as<uint8_t>();
+
+      if (doc.containsKey("appWeather"))
+        appWeather = doc["appWeather"].as<uint8_t>();
+      else if (doc.containsKey("homeShowWeather"))
+        appWeather = doc["homeShowWeather"].as<uint8_t>();
+      appPomodoro = doc["appPomodoro"] | (uint8_t)1;
+      appVirtualPet = doc["appVirtualPet"] | (uint8_t)1;
+      appReadingStats = doc["appReadingStats"] | (uint8_t)1;
+      appSleepImagePicker = doc["appSleepImagePicker"] | (uint8_t)1;
+      if (doc.containsKey("appGames")) {
+        appGames = doc["appGames"] | (uint8_t)1;
+      } else {
+        appGames = 1;
+      }
+      appFlashcard = doc["appFlashcard"] | (uint8_t)1;
+      flashcardNewPerDay = doc["flashcardNewPerDay"] | (uint8_t)10;
+      flashcardMaxReviewPerDay = doc["flashcardMaxReviewPerDay"] | (uint8_t)250;
+      flashcardFontSize = doc["flashcardFontSize"] | (uint8_t)1;
+      LOG_DBG("CPS", "CrossPet settings loaded from file");
+      return true;
+    }
+  }
+
+  constexpr char LEGACY_PATH[] = "/.crosspoint/settings.json";
+  if (Storage.exists(LEGACY_PATH)) {
+    String json = Storage.readFile(LEGACY_PATH);
+    if (!json.isEmpty()) {
+      JsonDocument doc;
+      auto error = deserializeJson(doc, json);
+      if (!error) {
+        appClock = doc["homeShowClock"] | (uint8_t)1;
+        appWeather = doc["homeShowWeather"] | (uint8_t)1;
+        LOG_DBG("CPS", "CrossPet settings migrated from settings.json");
+        saveToFile();
+        return true;
+      }
+    }
+  }
+
+  LOG_DBG("CPS", "CrossPet settings: no file found, using defaults");
+  return false;
+}    LOG_ERR("CPS", "Failed to save CrossPet settings");
   }
   return ok;
 }
