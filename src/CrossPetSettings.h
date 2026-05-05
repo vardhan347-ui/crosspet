@@ -20,11 +20,7 @@ class CrossPetSettings {
   // Home screen layout
   uint8_t homeFocusMode = 0;  // 1=show only current book (no recent covers/stats)
 
-  // Beta: apply custom SD-card font to UI text (filenames, menus) as well.
-  // Off by default — enabling may slow UI rendering for scripts not in glyph cache.
-  uint8_t systemWideCustomFont = 0;
-
-  // Per-app visibility — controls both Tools menu and home screen widgets (1=show, 0=hide)
+  // Per-app visibility -- controls both Tools menu and home screen widgets (1=show, 0=hide)
   uint8_t appClock = 1;
   uint8_t appWeather = 1;
   uint8_t appPomodoro = 1;
@@ -35,6 +31,17 @@ class CrossPetSettings {
   uint8_t appFlashcard = 1;  // Per-app visibility toggle (1=show, 0=hide)
   uint8_t flashcardNewPerDay = 10;      // New cards per day limit
   uint8_t flashcardMaxReviewPerDay = 250; // Max reviews per day (capped at 255 for uint8_t)
+  uint8_t flashcardFontSize = 1;        // 0=Small(12pt) 1=Medium(14pt) 2=Large(16pt) 3=XLarge(18pt)
+
+ private:
+  CrossPetSettings() = default;
+  static CrossPetSettings instance;
+
+  static constexpr char SETTINGS_PATH[] = "/.crosspoint/crosspet.json";
+};
+
+// Helper macro to access CrossPet settings
+#define PET_SETTINGS CrossPetSettings::getInstance()  uint8_t flashcardMaxReviewPerDay = 250; // Max reviews per day (capped at 255 for uint8_t)
 
  private:
   CrossPetSettings() = default;
