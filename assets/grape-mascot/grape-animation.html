@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grape mascot — hop &amp; leaf drop</title>
+<style>
+  :root { --bg: #ffffff; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: var(--bg);
+    display: flex; align-items: center; justify-content: center;
+    -webkit-font-smoothing: antialiased;
+  }
+  body.bg-dark  { --bg: #000000; }
+  body.bg-none  { --bg: transparent; }
+  #stage { width: min(100vw, 100vh); height: min(100vw, 100vh); display: block; }
+</style>
+</head>
+<body>
+<svg id="stage" viewBox="-90 -235 1500 1500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="bodyClip"><path d="M665,301C683.3,301.0 707.5,302.3 730,308C752.5,313.7 778.3,322.2 800,335C821.7,347.8 841.7,365.8 860,385C878.3,404.2 895.0,425.8 910,450C925.0,474.2 938.7,503.7 950,530C961.3,556.3 971.3,585.0 978,608C984.7,631.0 990.3,647.7 990,668C989.7,688.3 981.3,712.2 976,730C970.7,747.8 965.7,761.3 958,775C950.3,788.7 941.3,798.2 930,812C918.7,825.8 906.7,845.0 890,858C873.3,871.0 851.7,882.2 830,890C808.3,897.8 785.0,901.7 760,905C735.0,908.3 706.7,909.5 680,910C653.3,910.5 626.7,909.7 600,908C573.3,906.3 545.0,903.3 520,900C495.0,896.7 470.0,893.3 450,888C430.0,882.7 415.0,877.7 400,868C385.0,858.3 370.3,844.7 360,830C349.7,815.3 343.2,799.7 338,780C332.8,760.3 329.3,733.3 329,712C328.7,690.7 332.2,670.7 336,652C339.8,633.3 345.5,617.8 352,600C358.5,582.2 365.7,564.2 375,545C384.3,525.8 395.5,504.2 408,485C420.5,465.8 434.7,447.8 450,430C465.3,412.2 481.7,393.8 500,378C518.3,362.2 540.0,346.7 560,335C580.0,323.3 602.5,313.7 620,308C637.5,302.3 646.7,301.0 665,301Z"/></clipPath>
+    <radialGradient id="gBody" cx="34%" cy="24%" r="86%">
+      <stop offset="0%"   stop-color="#c98bfd"/>
+      <stop offset="34%"  stop-color="#9a55fb"/>
+      <stop offset="68%"  stop-color="#7028fa"/>
+      <stop offset="100%" stop-color="#3602c0"/>
+    </radialGradient>
+    <radialGradient id="gBodyRim" cx="50%" cy="88%" r="60%">
+      <stop offset="0%"   stop-color="#2d029f" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#2d029f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gFace" cx="42%" cy="34%" r="78%">
+      <stop offset="0%"   stop-color="#ffffff"/>
+      <stop offset="72%"  stop-color="#fdfcff"/>
+      <stop offset="100%" stop-color="#e9e1f7"/>
+    </radialGradient>
+    <radialGradient id="gLimb" cx="30%" cy="22%" r="92%">
+      <stop offset="0%"   stop-color="#ffffff"/>
+      <stop offset="52%"  stop-color="#f6f2ff"/>
+      <stop offset="100%" stop-color="#cfc1ec"/>
+    </radialGradient>
+    <filter id="fLimb" x="-30%" y="-30%" width="170%" height="170%">
+      <feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#3d1f6b" flood-opacity="0.26"/>
+    </filter>
+    <linearGradient id="gLeaf" x1="10%" y1="90%" x2="85%" y2="8%">
+      <stop offset="0%"   stop-color="#2bb903"/>
+      <stop offset="55%"  stop-color="#54dc03"/>
+      <stop offset="100%" stop-color="#8bf04a"/>
+    </linearGradient>
+    <linearGradient id="gLeafDark" x1="20%" y1="15%" x2="80%" y2="95%">
+      <stop offset="0%"   stop-color="#1f9d02" stop-opacity="0.0"/>
+      <stop offset="100%" stop-color="#1a8a02" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="gStem" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#0a9422"/>
+      <stop offset="100%" stop-color="#18c433"/>
+    </linearGradient>
+    <radialGradient id="gShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#3d1f6b" stop-opacity="0.30"/>
+      <stop offset="60%"  stop-color="#3d1f6b" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#3d1f6b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="fSoft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+    <filter id="fSoftSmall" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+
+  <!-- ground shadows -->
+  <ellipse id="shadow" cx="655" cy="1092" rx="250" ry="42" fill="url(#gShadow)"/>
+  <ellipse id="leafShadow" cx="1065" cy="1082" rx="120" ry="22" fill="url(#gShadow)" opacity="0"/>
+
+  <!-- dust puffs -->
+  <g id="dust"></g>
+
+  <!-- legs are rigged in world space so the feet stay planted -->
+  <g id="legs" filter="url(#fLimb)" stroke="#dbd0f3" stroke-width="5">
+    <path id="legL" fill="none" stroke="url(#gLimb)" stroke-width="96" stroke-linecap="round"/>
+    <path id="legR" fill="none" stroke="url(#gLimb)" stroke-width="96" stroke-linecap="round"/>
+    <ellipse id="footL" rx="92" ry="50" fill="url(#gLimb)"/>
+    <ellipse id="footR" rx="92" ry="50" fill="url(#gLimb)"/>
+  </g>
+
+  <g id="charRoot">
+    <g id="charBody">
+      <!-- arms behind the body so the shoulder joint is hidden -->
+      <g id="armL" filter="url(#fLimb)">
+        <path d="M396,744 C348,782 300,812 268,850" fill="none" stroke="#dbd0f3"
+              stroke-width="84" stroke-linecap="round"/>
+        <path d="M396,744 C348,782 300,812 268,850" fill="none" stroke="url(#gLimb)"
+              stroke-width="76" stroke-linecap="round"/>
+        <ellipse cx="268" cy="854" rx="62" ry="52" fill="url(#gLimb)" stroke="#dbd0f3" stroke-width="5" transform="rotate(-28 268 854)"/>
+      </g>
+      <g id="armR" filter="url(#fLimb)">
+        <path d="M936,764 C982,794 1018,824 1038,862" fill="none" stroke="#dbd0f3"
+              stroke-width="82" stroke-linecap="round"/>
+        <path d="M936,764 C982,794 1018,824 1038,862" fill="none" stroke="url(#gLimb)"
+              stroke-width="74" stroke-linecap="round"/>
+        <ellipse cx="1040" cy="866" rx="60" ry="51" fill="url(#gLimb)" stroke="#dbd0f3" stroke-width="5" transform="rotate(22 1040 866)"/>
+      </g>
+
+      <!-- body blob -->
+      <path id="body" fill="url(#gBody)"
+        d="M665,301C683.3,301.0 707.5,302.3 730,308C752.5,313.7 778.3,322.2 800,335C821.7,347.8 841.7,365.8 860,385C878.3,404.2 895.0,425.8 910,450C925.0,474.2 938.7,503.7 950,530C961.3,556.3 971.3,585.0 978,608C984.7,631.0 990.3,647.7 990,668C989.7,688.3 981.3,712.2 976,730C970.7,747.8 965.7,761.3 958,775C950.3,788.7 941.3,798.2 930,812C918.7,825.8 906.7,845.0 890,858C873.3,871.0 851.7,882.2 830,890C808.3,897.8 785.0,901.7 760,905C735.0,908.3 706.7,909.5 680,910C653.3,910.5 626.7,909.7 600,908C573.3,906.3 545.0,903.3 520,900C495.0,896.7 470.0,893.3 450,888C430.0,882.7 415.0,877.7 400,868C385.0,858.3 370.3,844.7 360,830C349.7,815.3 343.2,799.7 338,780C332.8,760.3 329.3,733.3 329,712C328.7,690.7 332.2,670.7 336,652C339.8,633.3 345.5,617.8 352,600C358.5,582.2 365.7,564.2 375,545C384.3,525.8 395.5,504.2 408,485C420.5,465.8 434.7,447.8 450,430C465.3,412.2 481.7,393.8 500,378C518.3,362.2 540.0,346.7 560,335C580.0,323.3 602.5,313.7 620,308C637.5,302.3 646.7,301.0 665,301Z"/>
+      <!-- bottom rim shading + top-left sheen, clipped to the silhouette -->
+      <g clip-path="url(#bodyClip)">
+      <path fill="url(#gBodyRim)" style="mix-blend-mode:multiply"
+        d="M665,301C683.3,301.0 707.5,302.3 730,308C752.5,313.7 778.3,322.2 800,335C821.7,347.8 841.7,365.8 860,385C878.3,404.2 895.0,425.8 910,450C925.0,474.2 938.7,503.7 950,530C961.3,556.3 971.3,585.0 978,608C984.7,631.0 990.3,647.7 990,668C989.7,688.3 981.3,712.2 976,730C970.7,747.8 965.7,761.3 958,775C950.3,788.7 941.3,798.2 930,812C918.7,825.8 906.7,845.0 890,858C873.3,871.0 851.7,882.2 830,890C808.3,897.8 785.0,901.7 760,905C735.0,908.3 706.7,909.5 680,910C653.3,910.5 626.7,909.7 600,908C573.3,906.3 545.0,903.3 520,900C495.0,896.7 470.0,893.3 450,888C430.0,882.7 415.0,877.7 400,868C385.0,858.3 370.3,844.7 360,830C349.7,815.3 343.2,799.7 338,780C332.8,760.3 329.3,733.3 329,712C328.7,690.7 332.2,670.7 336,652C339.8,633.3 345.5,617.8 352,600C358.5,582.2 365.7,564.2 375,545C384.3,525.8 395.5,504.2 408,485C420.5,465.8 434.7,447.8 450,430C465.3,412.2 481.7,393.8 500,378C518.3,362.2 540.0,346.7 560,335C580.0,323.3 602.5,313.7 620,308C637.5,302.3 646.7,301.0 665,301Z"/>
+      <ellipse cx="487" cy="428" rx="118" ry="86" fill="#ffffff" opacity="0.30"
+               filter="url(#fSoft)" transform="rotate(-38 487 428)"/>
+      </g>
+
+      <!-- face -->
+      <ellipse id="face" cx="655" cy="640" rx="208" ry="189" fill="url(#gFace)"/>
+
+      <g id="eyes">
+        <ellipse id="eyeL" cx="575" cy="621" rx="35" ry="37" fill="#14022a"/>
+        <ellipse id="eyeR" cx="740" cy="621" rx="35" ry="37" fill="#14022a"/>
+        <circle id="glintL" cx="563" cy="606" r="9" fill="#ffffff"/>
+        <circle id="glintR" cx="728" cy="606" r="9" fill="#ffffff"/>
+      </g>
+
+      <g id="mouthGroup">
+        <clipPath id="mouthClip"><path id="mouthClipPath"/></clipPath>
+        <path id="mouth" fill="#1d0433"/>
+        <g clip-path="url(#mouthClip)">
+          <ellipse id="tongue" fill="#8a37f9"/>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- leaf: attached to the head, then detached into world space -->
+  <g id="leafGroup">
+    <path id="stem" d="M718,336 C712,300 722,272 758,256" fill="none" stroke="url(#gStem)"
+          stroke-width="30" stroke-linecap="round"/>
+    <path id="leafBlade" fill="url(#gLeaf)"
+          d="M757,262 C790,168 884,92 1000,90 C1024,196 962,282 757,262 Z"/>
+    <path fill="url(#gLeafDark)"
+          d="M757,262 C790,168 884,92 1000,90 C1024,196 962,282 757,262 Z"/>
+    <path d="M762,260 C838,232 934,168 998,94" fill="none" stroke="#1f9d02"
+          stroke-width="9" stroke-linecap="round" opacity="0.45"/>
+    <ellipse cx="880" cy="150" rx="60" ry="26" fill="#ffffff" opacity="0.22"
+             filter="url(#fSoftSmall)" transform="rotate(-32 880 150)"/>
+  </g>
+</svg>
+
+<script>
+(() => {
+  "use strict";
+
+  // ---- stage constants (SVG user units) --------------------------------
+  const T       = 2.6;              // loop length in seconds
+  const GROUND  = 1085;             // y where the feet rest
+  const PIVOT   = [655, 905];       // body pivot: base of the blob
+  const STEM    = [726, 318];       // where the leaf joins the body
+  const HIP     = [[560, 872], [758, 876]];   // leg attach points on the body
+  const FOOT    = [[515, 1040], [787, 1043]]; // planted foot centres
+
+  const $ = (id) => document.getElementById(id);
+  const el = {
+    stage: $("stage"), shadow: $("shadow"), leafShadow: $("leafShadow"), dust: $("dust"),
+    charRoot: $("charRoot"), charBody: $("charBody"), armL: $("armL"), armR: $("armR"),
+    legL: $("legL"), legR: $("legR"), footL: $("footL"), footR: $("footR"),
+    eyeL: $("eyeL"), eyeR: $("eyeR"), glintL: $("glintL"), glintR: $("glintR"),
+    mouth: $("mouth"), mouthClipPath: $("mouthClipPath"), tongue: $("tongue"),
+    leafGroup: $("leafGroup"),
+  };
+
+  // ---- small maths helpers ---------------------------------------------
+  const clamp  = (v, a, b) => v < a ? a : v > b ? b : v;
+  const lerp   = (a, b, u) => a + (b - a) * u;
+  const smooth = (u) => u * u * (3 - 2 * u);
+  const easeOut  = (u) => 1 - Math.pow(1 - u, 3);
+  const easeIn   = (u) => u * u * u;
+  const easeOutBack = (u) => { const c = 1.9; return 1 + (c + 1) * Math.pow(u - 1, 3) + c * Math.pow(u - 1, 2); };
+  // normalised progress through [a,b]; NaN-free outside the window
+  const span = (t, a, b) => clamp((t - a) / (b - a), 0, 1);
+  const inSpan = (t, a, b) => t >= a && t < b;
+  const arch = (u) => Math.sin(Math.PI * clamp(u, 0, 1));   // 0 -> 1 -> 0
+
+  // ---- timeline ---------------------------------------------------------
+  // idle hop, idle hop, crouch, big jump (leaf pops off), land, shock, leaf back on
+  const P = {
+    idle1: [0.00, 0.55], idle2: [0.55, 1.05], antic: [1.05, 1.22],
+    jump:  [1.22, 1.70], land:  [1.70, 1.88], react: [1.88, 2.16],
+    hold:  [2.16, 2.38], back:  [2.38, 2.60],
+  };
+  const T_DETACH  = 1.44;   // leaf lets go just past the apex
+  const T_LEAFHIT = 1.90;   // leaf touches the ground
+  const BLADE_C   = [880, 178];   // centre of the leaf blade in local coords
+  const LEAF_REST = [1065, 1046]; // where the blade comes to rest on the floor
+  const LEAF_RESTROT = 104;       // lying on its side
+
+  // decaying bounce used for landing squash
+  const bounce = (u, amp, decay, freq) => amp * Math.exp(-decay * u) * Math.cos(freq * u);
+
+  function idleHop(u, h) {
+    // crouch -> airborne -> land, all inside one idle beat
+    let y = 0, sy = 1;
+    if (u < 0.22) {
+      sy = 1 - 0.085 * smooth(u / 0.22);
+    } else if (u < 0.74) {
+      const v = (u - 0.22) / 0.52;
+      y  = -h * arch(v);
+      sy = 1 + 0.075 * arch(v) - 0.085 * (1 - smooth(clamp(v * 3, 0, 1)));
+    } else {
+      const v = (u - 0.74) / 0.26;
+      sy = 1 - bounce(v, 0.13, 4.2, 9.5);
+    }
+    return { y, sy };
+  }
+
+  // full character state for a given time
+  function state(t) {
+    t = ((t % T) + T) % T;
+    const s = {
+      hopY: 0, sx: 1, sy: 1, tilt: 0, dx: 0,
+      armL: 0, armR: 0,
+      blink: 0, shock: 0, eyeDx: 0, eyeDy: 0,
+      mouth: 0,                       // 0 = smile, 1 = wide "oh no"
+      leafAttached: true, leafWobble: 0,
+      leafPos: [0, 0], leafRot: 0, leafScale: 1,
+    };
+
+    // ---- body: hops, crouch, jump, landing --------------------------------
+    if (inSpan(t, ...P.idle1) || inSpan(t, ...P.idle2)) {
+      const [a, b] = inSpan(t, ...P.idle1) ? P.idle1 : P.idle2;
+      const hop = idleHop(span(t, a, b), 74);
+      s.hopY = hop.y; s.sy = hop.sy;
+      s.mouth = 0.22 * arch(span(t, a, b));
+    } else if (inSpan(t, ...P.antic)) {
+      const u = span(t, ...P.antic);
+      s.sy = 1 - 0.17 * smooth(u);          // deep crouch before the big one
+      s.hopY = 6 * smooth(u);
+      s.mouth = 0.25 * u;
+    } else if (inSpan(t, ...P.jump)) {
+      const u = span(t, ...P.jump);
+      s.hopY = -245 * arch(Math.pow(u, 0.92));
+      s.sy = 1 + 0.16 * Math.sin(Math.PI * Math.pow(u, 0.7)) - 0.09 * (1 - smooth(clamp(u * 4, 0, 1)));
+      s.mouth = lerp(0.25, 1, smooth(clamp(u * 2.4, 0, 1)));
+    } else if (inSpan(t, ...P.land)) {
+      const u = span(t, ...P.land);
+      s.sy = 1 - bounce(u, 0.24, 3.6, 9.0);
+      s.mouth = 1;
+    } else {
+      // reaction / hold / leaf back on: small shivers, then settle
+      const u = span(t, P.react[0], P.back[1]);
+      s.sy = 1 - bounce(span(t, ...P.react), 0.05, 5.0, 11.0);
+      s.tilt += 1.6 * Math.sin(t * 46) * Math.exp(-3.2 * span(t, P.react[0], P.react[1]));
+      s.tilt += 3.0 * smooth(span(t, P.react[0] + 0.10, P.react[0] + 0.26))
+                    * (1 - smooth(span(t, P.back[0], P.back[0] + 0.12)));   // lean at the leaf
+      s.sy += 0.016 * Math.sin((t - P.react[0]) * 8.4);                     // breathing
+      s.dx = 4 * Math.sin(t * 52) * Math.exp(-3.0 * span(t, P.react[0], P.react[1]));
+      s.mouth = inSpan(t, ...P.back) ? lerp(1, 0, smooth(span(t, P.back[0] + 0.06, P.back[1] - 0.02))) : 1;
+      if (inSpan(t, ...P.back)) {
+        // little squash as the leaf pops back on
+        s.sy += 0.07 * arch(span(t, P.back[0] + 0.10, P.back[1]));
+      }
+      void u;
+    }
+    s.sx = 1 + (1 - s.sy) * 0.85;
+    s.tilt += 2.4 * Math.sin((t / T) * Math.PI * 4);   // lazy side-to-side sway
+
+    // ---- arms --------------------------------------------------------------
+    const swing = 13 * Math.sin((t / T) * Math.PI * 4 + 0.6);
+    s.armL = swing; s.armR = -swing;
+    if (inSpan(t, ...P.antic)) {
+      const u = smooth(span(t, ...P.antic));
+      s.armL = lerp(s.armL, -18, u); s.armR = lerp(s.armR, 18, u);   // wind up, arms tucked back
+    } else if (inSpan(t, ...P.jump)) {
+      const u = arch(span(t, ...P.jump));
+      s.armL = lerp(swing, 58, u); s.armR = lerp(-swing, -58, u);    // flung up
+    } else if (t >= P.land[0]) {
+      const u = smooth(span(t, P.land[0], P.land[0] + 0.14));
+      const flail = 9 * Math.sin(t * 40) * Math.exp(-3 * span(t, P.land[0], P.hold[1]));
+      s.armL = lerp(58, 34 + flail, u); s.armR = lerp(-58, -34 - flail, u);
+      if (inSpan(t, ...P.back)) {
+        const v = smooth(span(t, P.back[0], P.back[1]));
+        s.armL = lerp(s.armL, swing, v); s.armR = lerp(s.armR, -swing, v);
+      }
+    }
+
+    // ---- face --------------------------------------------------------------
+    const blinkAt = (t0) => arch(span(t, t0, t0 + 0.14));
+    s.blink = Math.max(blinkAt(0.30), blinkAt(0.84));
+    if (t >= T_DETACH && t < P.back[1] - 0.04) {
+      s.shock = smooth(span(t, T_DETACH, T_DETACH + 0.18));
+      if (t > P.back[0] + 0.08) s.shock *= 1 - smooth(span(t, P.back[0] + 0.08, P.back[1] - 0.04));
+      s.blink = 0;
+    }
+    if (t >= T_LEAFHIT && t < P.back[0] + 0.06) {
+      // glance down at the leaf lying on the floor
+      const u = smooth(span(t, T_LEAFHIT, T_LEAFHIT + 0.16));
+      s.eyeDx = 11 * u; s.eyeDy = 9 * u;
+    }
+
+    // ---- leaf --------------------------------------------------------------
+    s.leafWobble = 6 * Math.sin((t / T) * Math.PI * 4.8 + 0.4);
+    if (t >= T_DETACH && t < P.back[1] - 0.005) {
+      s.leafAttached = false;
+      const at = state(T_DETACH - 0.001);            // pose at the moment it lets go
+      const start = bodyPoint(BLADE_C, at);
+      let target, rot, scale;
+      if (t < T_LEAFHIT) {
+        const u = span(t, T_DETACH, T_LEAFHIT);
+        target = [lerp(start[0], LEAF_REST[0], easeOut(u)),
+                  lerp(start[1], LEAF_REST[1], easeIn(u)) - 120 * arch(u)];
+        rot = lerp(0, LEAF_RESTROT, easeOut(u)) + 34 * Math.sin(u * 9.5);
+        scale = lerp(1, 0.94, u);
+      } else if (t < P.back[0]) {
+        const u = span(t, T_LEAFHIT, T_LEAFHIT + 0.24);
+        target = [LEAF_REST[0], LEAF_REST[1] - 34 * arch(u) * Math.exp(-2.2 * u)];
+        rot = LEAF_RESTROT + bounce(u, 9, 4.5, 10);
+        scale = 0.94;
+      } else {
+        // springs back onto the head for a seamless loop
+        const u = smooth(span(t, P.back[0], P.back[1] - 0.005));
+        target = [lerp(LEAF_REST[0], BLADE_C[0], u),
+                  lerp(LEAF_REST[1], BLADE_C[1], easeOutBack(u)) - 130 * arch(u)];
+        rot = lerp(LEAF_RESTROT - 360, 0, u);
+        scale = lerp(0.94, 1, u);
+      }
+      s.leafRot = rot; s.leafScale = scale;
+      s.leafPos = leafOffset(target, rot, scale);
+    }
+    return s;
+  }
+
+  // body transform, as an SVG transform list
+  function bodyTransform(s) {
+    return `translate(${s.dx.toFixed(2)},${s.hopY.toFixed(2)}) ` +
+           `translate(${PIVOT[0]},${PIVOT[1]}) rotate(${s.tilt.toFixed(3)}) ` +
+           `scale(${s.sx.toFixed(4)},${s.sy.toFixed(4)}) translate(${-PIVOT[0]},${-PIVOT[1]})`;
+  }
+
+  // a body-local point in world space for a given state
+  function bodyPoint(p, s) {
+    const r = s.tilt * Math.PI / 180;
+    const px = (p[0] - PIVOT[0]) * s.sx, py = (p[1] - PIVOT[1]) * s.sy;
+    return [
+      PIVOT[0] + px * Math.cos(r) - py * Math.sin(r) + s.dx,
+      PIVOT[1] + px * Math.sin(r) + py * Math.cos(r) + s.hopY,
+    ];
+  }
+
+  // translate needed so the blade centre lands on `target` after rotate+scale about STEM
+  function leafOffset(target, rotDeg, scale) {
+    const r = rotDeg * Math.PI / 180;
+    const vx = (BLADE_C[0] - STEM[0]) * scale, vy = (BLADE_C[1] - STEM[1]) * scale;
+    const bx = STEM[0] + vx * Math.cos(r) - vy * Math.sin(r);
+    const by = STEM[1] + vx * Math.sin(r) + vy * Math.cos(r);
+    return [target[0] - bx, target[1] - by];
+  }
+
+  // mouth shape: flat-topped smile (o=0) morphing into a wide oval (o=1)
+  function mouthPath(o) {
+    const w = lerp(127, 112, o), h = lerp(58, 122, o);
+    const cx = 655, top = lerp(669, 662, o);
+    const topCurve = lerp(0, 0.62, o);
+    const hw = w / 2;
+    return `M${cx - hw},${top} C${cx - hw},${top - topCurve * h * 0.62} ${cx + hw},${top - topCurve * h * 0.62} ${cx + hw},${top} ` +
+           `C${cx + hw},${top + h * 0.98} ${cx - hw},${top + h * 0.98} ${cx - hw},${top} Z`;
+  }
+
+  // ---- dust puffs kicked up on landing ----------------------------------
+  const PUFFS = [
+    { t0: P.land[0],  x: 470, y: GROUND - 8, vx: -150, vy: -34, r: 26 },
+    { t0: P.land[0] + 0.03, x: 560, y: GROUND - 2, vx: -96, vy: -20, r: 18 },
+    { t0: P.land[0],  x: 840, y: GROUND - 8, vx: 155, vy: -36, r: 26 },
+    { t0: P.land[0] + 0.03, x: 760, y: GROUND - 2, vx: 92, vy: -18, r: 18 },
+    { t0: T_LEAFHIT, x: 930, y: GROUND - 4, vx: -105, vy: -26, r: 15 },
+    { t0: T_LEAFHIT + 0.02, x: 1035, y: GROUND - 4, vx: 105, vy: -24, r: 13 },
+  ];
+  const puffNodes = PUFFS.map(() => {
+    const c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    c.setAttribute("fill", "#7a5bb5");
+    el.dust.appendChild(c);
+    return c;
+  });
+
+  // ---- draw one frame ---------------------------------------------------
+  function render(t) {
+    const s = state(t);
+    const bt = bodyTransform(s);
+    el.charRoot.setAttribute("transform", "");
+    el.charBody.setAttribute("transform", bt);
+
+    el.armL.setAttribute("transform", `rotate(${s.armL.toFixed(2)} 396 744)`);
+    el.armR.setAttribute("transform", `rotate(${s.armR.toFixed(2)} 936 764)`);
+
+    // legs: hips ride the body, feet stay on the ground unless airborne
+    const lift = Math.max(0, -s.hopY);
+    const airborne = clamp(lift / 90, 0, 1);
+    for (let i = 0; i < 2; i++) {
+      const hip = { x: HIP[i][0], y: HIP[i][1] };
+      const r = s.tilt * Math.PI / 180;
+      const px = (hip.x - PIVOT[0]) * s.sx, py = (hip.y - PIVOT[1]) * s.sy;
+      const hx = PIVOT[0] + px * Math.cos(r) - py * Math.sin(r) + s.dx;
+      const hy = PIVOT[1] + px * Math.sin(r) + py * Math.cos(r) + s.hopY;
+      // feet tuck up and inward while in the air
+      const tuck = airborne * 74;
+      const fx = lerp(FOOT[i][0], lerp(FOOT[i][0], 655, 0.34), airborne) + s.dx * 0.4;
+      const fy = FOOT[i][1] - lift * 1.0 - tuck * 0.42;
+      const ax = lerp(hx, fx, 0.55) + (i === 0 ? -14 : 14) * (1 - airborne);
+      const ay = lerp(hy, fy, 0.62);
+      (i === 0 ? el.legL : el.legR).setAttribute("d", `M${hx.toFixed(1)},${hy.toFixed(1)} Q${ax.toFixed(1)},${ay.toFixed(1)} ${fx.toFixed(1)},${(fy - 12).toFixed(1)}`);
+      const foot = i === 0 ? el.footL : el.footR;
+      foot.setAttribute("cx", fx.toFixed(1));
+      foot.setAttribute("cy", fy.toFixed(1));
+      foot.setAttribute("transform", `rotate(${(i === 0 ? -8 : 8) - airborne * (i === 0 ? 22 : -22)} ${fx.toFixed(1)} ${fy.toFixed(1)})`);
+    }
+
+    // eyes: blink squeeze, shock widen, glance at the fallen leaf
+    const rx = lerp(35, 41, s.shock), ry = lerp(37, 48, s.shock) * lerp(1, 0.07, s.blink);
+    for (const [eye, glint, cx] of [[el.eyeL, el.glintL, 575], [el.eyeR, el.glintR, 740]]) {
+      eye.setAttribute("cx", (cx + s.eyeDx).toFixed(1));
+      eye.setAttribute("cy", (621 + s.eyeDy).toFixed(1));
+      eye.setAttribute("rx", rx.toFixed(1));
+      eye.setAttribute("ry", ry.toFixed(1));
+      glint.setAttribute("cx", (cx - 12 + s.eyeDx).toFixed(1));
+      glint.setAttribute("cy", (606 + s.eyeDy - s.shock * 6).toFixed(1));
+      glint.setAttribute("r", (9 * lerp(1, 0.1, s.blink)).toFixed(1));
+    }
+
+    const d = mouthPath(s.mouth);
+    el.mouth.setAttribute("d", d);
+    el.mouthClipPath.setAttribute("d", d);
+    const mw = lerp(127, 112, s.mouth), mh = lerp(58, 122, s.mouth), mtop = lerp(669, 662, s.mouth);
+    el.tongue.setAttribute("cx", 655);
+    el.tongue.setAttribute("cy", (mtop + mh * 0.78).toFixed(1));
+    el.tongue.setAttribute("rx", (mw * 0.31).toFixed(1));
+    el.tongue.setAttribute("ry", (mh * 0.26).toFixed(1));
+
+    // leaf: rides the head, or lives in world space once it drops
+    if (s.leafAttached) {
+      el.leafGroup.setAttribute("transform", `${bt} rotate(${s.leafWobble.toFixed(2)} ${STEM[0]} ${STEM[1]})`);
+    } else {
+      el.leafGroup.setAttribute("transform",
+        `translate(${s.leafPos[0].toFixed(1)},${s.leafPos[1].toFixed(1)}) ` +
+        `translate(${STEM[0]},${STEM[1]}) rotate(${s.leafRot.toFixed(2)}) scale(${s.leafScale.toFixed(3)}) ` +
+        `translate(${-STEM[0]},${-STEM[1]})`);
+    }
+
+    // shadows shrink as the character leaves the ground
+    const shrink = clamp(lift / 245, 0, 1);
+    el.shadow.setAttribute("rx", (250 * s.sx * lerp(1, 0.55, shrink)).toFixed(1));
+    el.shadow.setAttribute("ry", (42 * lerp(1, 0.62, shrink)).toFixed(1));
+    el.shadow.setAttribute("cx", (655 + s.dx).toFixed(1));
+    el.shadow.setAttribute("opacity", lerp(1, 0.45, shrink).toFixed(3));
+
+    const tt = ((t % T) + T) % T;
+    const leafDown = tt >= T_LEAFHIT && tt < P.back[0] + 0.10;
+    el.leafShadow.setAttribute("opacity", leafDown
+      ? (0.9 * smooth(span(tt, T_LEAFHIT, T_LEAFHIT + 0.1)) * (1 - smooth(span(tt, P.back[0], P.back[0] + 0.10)))).toFixed(3)
+      : "0");
+
+    // dust
+    PUFFS.forEach((p, i) => {
+      const age = tt - p.t0;
+      const n = puffNodes[i];
+      if (age < 0 || age > 0.5) { n.setAttribute("opacity", "0"); return; }
+      const u = age / 0.5;
+      n.setAttribute("cx", (p.x + p.vx * u).toFixed(1));
+      n.setAttribute("cy", (p.y + p.vy * u + 120 * u * u).toFixed(1));
+      n.setAttribute("r", (p.r * lerp(0.5, 1.25, u)).toFixed(1));
+      n.setAttribute("opacity", (0.34 * (1 - u) * (1 - u)).toFixed(3));
+    });
+  }
+
+  // ---- playback ---------------------------------------------------------
+  const params = new URLSearchParams(location.search);
+  const bg = params.get("bg");
+  if (bg === "dark" || bg === "black") document.body.classList.add("bg-dark");
+  if (bg === "none" || bg === "transparent") document.body.classList.add("bg-none");
+
+  let paused = params.has("frame");
+  const t0 = performance.now();
+  function tick(now) {
+    if (!paused) render((now - t0) / 1000);
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+
+  // deterministic hooks used by the frame exporter
+  window.grapeAnim = {
+    duration: T,
+    setTime(t) { paused = true; render(t); },
+    play() { paused = false; },
+  };
+  render(params.has("frame") ? parseFloat(params.get("frame")) : 0);
+})();
+</script>
+</body>
+</html>
