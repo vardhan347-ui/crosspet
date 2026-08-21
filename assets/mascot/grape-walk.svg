@@ -1,0 +1,253 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 380" width="340" height="380" role="img" aria-labelledby="gwTitle gwDesc">
+  <title id="gwTitle">Grape mascot walking</title>
+  <desc id="gwDesc">A cartoon grape cluster character marching in place on a scrolling road.</desc>
+  <style>
+    svg {
+      color: #8A7C96; /* road dashes; override from the host page */
+      --grape: #A342DE;
+      --grape-lo: #8329C0;
+      --grape-hi: #C77BF0;
+      --deep: #3E1263;
+      --ink: #1A1220;
+      --leaf: #35B024;
+      --leaf-lo: #23761A;
+      --vine: #3DC42B;
+      --tongue: #E01E6E;
+      --cycle: 0.92s;
+      --ease: cubic-bezier(.42,0,.58,1);
+    }
+    .ink-fill { fill: var(--ink); }
+    .grape-fill { fill: var(--grape); }
+    .outline { stroke: var(--ink); stroke-width: 7; stroke-linejoin: round; }
+    .limb-out { stroke: var(--ink); stroke-width: 30; stroke-linecap: round; fill: none; }
+    .limb-in  { stroke: var(--grape); stroke-width: 22; stroke-linecap: round; fill: none; }
+    .arm-out  { stroke: var(--ink); stroke-width: 27; stroke-linecap: round; fill: none; }
+    .arm-in   { stroke: var(--grape); stroke-width: 19; stroke-linecap: round; fill: none; }
+    .bump { stroke: var(--ink); stroke-width: 4; stroke-linecap: round; fill: none; opacity: .8; }
+    .finger { stroke: var(--ink); stroke-width: 3.4; stroke-linecap: round; fill: none; }
+    .vein { stroke: var(--leaf-lo); stroke-width: 3.6; stroke-linecap: round; fill: none; }
+
+    /* --- animation rig --------------------------------------------------- */
+    .torso, .leg, .shoe, .arm, .foliage, .pupils, .lid, .shadow, .dust, .road-dash, .pebble {
+      transform-box: view-box;
+      animation-iteration-count: infinite;
+      animation-timing-function: var(--ease);
+    }
+    .torso  { transform-origin: 162px 240px; animation-name: bob;    animation-duration: var(--cycle); }
+    .legL   { transform-origin: 128px 232px; animation-name: stepL;  animation-duration: var(--cycle); }
+    .legR   { transform-origin: 196px 232px; animation-name: stepR;  animation-duration: var(--cycle); animation-delay: calc(var(--cycle) * -.5); }
+    .shoeL  { transform-origin: 128px 324px; animation-name: footL;  animation-duration: var(--cycle); }
+    .shoeR  { transform-origin: 196px 324px; animation-name: footR;  animation-duration: var(--cycle); animation-delay: calc(var(--cycle) * -.5); }
+    .armL   { transform-origin:  86px 158px; animation-name: swingL; animation-duration: var(--cycle); }
+    .armR   { transform-origin: 238px 158px; animation-name: swingR; animation-duration: var(--cycle); }
+    .foliage{ transform-origin: 186px 70px;  animation-name: wobble; animation-duration: var(--cycle); animation-delay: calc(var(--cycle) * -.12); }
+    .pupils { transform-origin: 162px 152px; animation-name: gaze;   animation-duration: var(--cycle); }
+    .shadow { transform-origin: 162px 346px; animation-name: cast;   animation-duration: var(--cycle); }
+    .lid    { animation-name: blink; animation-duration: 5.2s; animation-timing-function: ease-in; }
+    .lidL   { transform-origin: 100px 118px; }
+    .lidR   { transform-origin: 152px 118px; }
+    .dustL  { transform-origin: 118px 338px; animation-name: puff; animation-duration: var(--cycle); animation-timing-function: ease-out; animation-delay: calc(var(--cycle) * -.02); }
+    .dustR  { transform-origin: 206px 338px; animation-name: puff; animation-duration: var(--cycle); animation-timing-function: ease-out; animation-delay: calc(var(--cycle) * .48); }
+    .road-dash { animation-name: roll; animation-duration: calc(var(--cycle) * 1.4); animation-timing-function: linear; }
+    .pebble { animation-name: drift; animation-duration: calc(var(--cycle) * 2.2); animation-timing-function: linear; }
+    .pebble2 { animation-duration: calc(var(--cycle) * 1.7); animation-delay: calc(var(--cycle) * -.9); }
+
+    /* Weight rides over the supporting leg: body sits low at each contact
+       (0% / 50%) and rises through mid-stance (28% / 78%). */
+    @keyframes bob {
+      0%   { transform: translate(-2px, 0) rotate(1.3deg); }
+      28%  { transform: translate(0, -6px) rotate(0deg); }
+      50%  { transform: translate(2px, 0)  rotate(-1.3deg); }
+      78%  { transform: translate(0, -6px) rotate(0deg); }
+      100% { transform: translate(-2px, 0) rotate(1.3deg); }
+    }
+    /* Stance 0-58%, swing 58-100%. The right leg runs the same curve half a
+       cycle out, so exactly one foot is off the ground for 80% of the loop.
+       scaleY shortens the leg as the knee comes toward the viewer; the shoe
+       keyframes below cancel that squash out again. */
+    @keyframes stepL {
+      0%   { transform: rotate(4deg)  scaleY(1); }
+      30%  { transform: rotate(1deg)  scaleY(1); }
+      58%  { transform: rotate(-4deg) scaleY(1); }
+      70%  { transform: rotate(-3deg) scaleY(.78); }
+      80%  { transform: rotate(0deg)  scaleY(.70); }
+      92%  { transform: rotate(3deg)  scaleY(.84); }
+      100% { transform: rotate(4deg)  scaleY(1); }
+    }
+    @keyframes stepR {
+      0%   { transform: rotate(-4deg) scaleY(1); }
+      30%  { transform: rotate(-1deg) scaleY(1); }
+      58%  { transform: rotate(4deg)  scaleY(1); }
+      70%  { transform: rotate(3deg)  scaleY(.78); }
+      80%  { transform: rotate(0deg)  scaleY(.70); }
+      92%  { transform: rotate(-3deg) scaleY(.84); }
+      100% { transform: rotate(-4deg) scaleY(1); }
+    }
+    @keyframes footL {
+      0%, 58% { transform: scaleY(1)    rotate(0deg); }
+      70%     { transform: scaleY(1.28) rotate(-8deg); }
+      80%     { transform: scaleY(1.43) rotate(-12deg); }
+      92%     { transform: scaleY(1.19) rotate(-5deg); }
+      100%    { transform: scaleY(1)    rotate(0deg); }
+    }
+    @keyframes footR {
+      0%, 58% { transform: scaleY(1)    rotate(0deg); }
+      70%     { transform: scaleY(1.28) rotate(8deg); }
+      80%     { transform: scaleY(1.43) rotate(12deg); }
+      92%     { transform: scaleY(1.19) rotate(5deg); }
+      100%    { transform: scaleY(1)    rotate(0deg); }
+    }
+    @keyframes swingL { 0% { transform: rotate(-10deg); } 50% { transform: rotate(9deg); } 100% { transform: rotate(-10deg); } }
+    @keyframes swingR { 0% { transform: rotate(10deg); }  50% { transform: rotate(-9deg); } 100% { transform: rotate(10deg); } }
+    @keyframes wobble { 0% { transform: rotate(-3.5deg); } 50% { transform: rotate(3.5deg); } 100% { transform: rotate(-3.5deg); } }
+    @keyframes gaze   { 0%,50%,100% { transform: translateY(.7px); } 28%,78% { transform: translateY(-.9px); } }
+    @keyframes cast   { 0%,50%,100% { transform: scale(1); opacity: 1; } 28%,78% { transform: scale(.86); opacity: .6; } }
+    @keyframes blink  { 0%,95.5%,100% { transform: scaleY(.42); } 97%,98% { transform: scaleY(1); } }
+    @keyframes puff {
+      0%   { transform: scale(.2)  translateY(0);    opacity: 0; }
+      8%   { transform: scale(.75) translateY(-2px); opacity: .5; }
+      34%  { transform: scale(1.5) translateY(-10px); opacity: 0; }
+      100% { transform: scale(.2)  translateY(0);    opacity: 0; }
+    }
+    @keyframes roll   { to { stroke-dashoffset: -66px; } }
+    @keyframes drift  { 0% { transform: translateX(0); opacity: 0; } 12% { opacity: .5; } 88% { opacity: .5; } 100% { transform: translateX(-300px); opacity: 0; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .leg, .shoe, .arm, .foliage, .pupils, .shadow, .dust, .road-dash, .pebble { animation: none !important; }
+      .torso { animation-name: breathe !important; animation-duration: 3.4s !important; }
+      @keyframes breathe { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+    }
+  </style>
+
+  <defs>
+    <radialGradient id="gw-shade">
+      <stop offset="0" stop-color="var(--ink)" stop-opacity=".3"/>
+      <stop offset="1" stop-color="var(--ink)" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gw-fadeG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000"/><stop offset=".2" stop-color="#fff"/>
+      <stop offset=".8" stop-color="#fff"/><stop offset="1" stop-color="#000"/>
+    </linearGradient>
+    <mask id="gw-fade"><rect x="0" y="318" width="340" height="62" fill="url(#gw-fadeG)"/></mask>
+    <clipPath id="gw-eyeL"><ellipse cx="133" cy="152" rx="26" ry="29"/></clipPath>
+    <clipPath id="gw-eyeR"><ellipse cx="185" cy="152" rx="26" ry="29"/></clipPath>
+    <clipPath id="gw-mouth"><path d="M128 192 C148 186 176 187 196 193 C200 220 186 240 162 240 C138 240 126 218 128 192 Z"/></clipPath>
+  </defs>
+
+  <!-- road -->
+  <g class="road" mask="url(#gw-fade)">
+    <path class="road-dash" d="M6 354 H334" stroke="currentColor" stroke-width="5" stroke-linecap="round"
+          stroke-dasharray="14 19" opacity=".28" fill="none"/>
+    <circle class="pebble" cx="316" cy="336" r="4" fill="currentColor" opacity=".35"/>
+    <circle class="pebble pebble2" cx="330" cy="366" r="3" fill="currentColor" opacity=".3"/>
+  </g>
+
+  <ellipse class="shadow" cx="162" cy="346" rx="96" ry="15" fill="url(#gw-shade)"/>
+
+  <g class="dust dustL" fill="var(--ink)" opacity="0">
+    <circle cx="106" cy="336" r="6"/><circle cx="122" cy="342" r="4"/><circle cx="94" cy="344" r="3.5"/>
+  </g>
+  <g class="dust dustR" fill="var(--ink)" opacity="0">
+    <circle cx="218" cy="336" r="6"/><circle cx="202" cy="342" r="4"/><circle cx="230" cy="344" r="3.5"/>
+  </g>
+
+  <!-- legs (behind the body) -->
+  <g class="leg legL">
+    <path class="limb-out" d="M128 226 L128 310"/>
+    <path class="limb-in"  d="M128 226 L128 310"/>
+    <g class="shoe shoeL">
+      <path class="outline" fill="var(--grape)" d="M158 304 L158 330 L94 330 C88 320 94 310 106 306 C120 301 146 300 158 304 Z"/>
+      <path class="outline" fill="var(--grape-hi)" d="M92 328 L160 328 C167 328 167 343 158 343 L102 343 C92 343 86 336 92 328 Z"/>
+    </g>
+  </g>
+  <g class="leg legR">
+    <path class="limb-out" d="M196 226 L196 310"/>
+    <path class="limb-in"  d="M196 226 L196 310"/>
+    <g class="shoe shoeR">
+      <g transform="matrix(-1 0 0 1 324 0)">
+        <path class="outline" fill="var(--grape)" d="M158 304 L158 330 L94 330 C88 320 94 310 106 306 C120 301 146 300 158 304 Z"/>
+        <path class="outline" fill="var(--grape-hi)" d="M92 328 L160 328 C167 328 167 343 158 343 L102 343 C92 343 86 336 92 328 Z"/>
+      </g>
+    </g>
+  </g>
+
+  <g class="torso">
+    <!-- stem, vine curl and leaf, behind the cluster -->
+    <g class="foliage">
+      <path class="outline" fill="var(--leaf)" d="M176 66 C166 36 180 16 200 14 C212 32 208 58 194 74 Z"/>
+      <path d="M204 28 C228 16 254 30 249 49 C246 63 227 65 224 51 C222 41 233 37 238 45"
+            stroke="var(--vine)" stroke-width="7" stroke-linecap="round" fill="none"/>
+      <path class="outline" fill="var(--leaf)"
+            d="M216 74 C238 54 268 52 288 62 C282 72 286 78 296 80 C286 94 292 104 302 108 C284 122 254 126 234 114 C220 106 212 90 216 74 Z"/>
+      <path class="vein" d="M228 104 C248 96 270 86 292 79"/>
+      <path class="vein" d="M252 96 L246 82"/>
+      <path class="vein" d="M270 88 L266 74"/>
+    </g>
+
+    <!-- grape cluster: stroked pass then flat fill pass = one clean union outline -->
+    <g class="outline" fill="var(--grape)">
+      <circle cx="160" cy="80"  r="40"/><circle cx="114" cy="110" r="38"/><circle cx="206" cy="108" r="40"/>
+      <circle cx="90"  cy="152" r="38"/><circle cx="160" cy="132" r="48"/><circle cx="228" cy="150" r="38"/>
+      <circle cx="108" cy="194" r="38"/><circle cx="214" cy="194" r="36"/><circle cx="160" cy="202" r="44"/>
+    </g>
+    <g class="grape-fill">
+      <circle cx="160" cy="80"  r="40"/><circle cx="114" cy="110" r="38"/><circle cx="206" cy="108" r="40"/>
+      <circle cx="90"  cy="152" r="38"/><circle cx="160" cy="132" r="48"/><circle cx="228" cy="150" r="38"/>
+      <circle cx="108" cy="194" r="38"/><circle cx="214" cy="194" r="36"/><circle cx="160" cy="202" r="44"/>
+    </g>
+    <g class="bump">
+      <path d="M140 66 C152 54 170 56 178 68"/>
+      <path d="M116 92 C128 80 146 80 156 90"/>
+      <path d="M178 96 C190 84 208 86 216 98"/>
+      <path d="M62 152 C72 138 90 136 100 146"/>
+      <path d="M226 156 C238 144 254 148 260 160"/>
+      <path d="M82 202 C92 190 108 190 116 200"/>
+      <path d="M208 206 C218 194 232 196 238 206"/>
+    </g>
+
+    <!-- arms -->
+    <g class="arm armL">
+      <path class="arm-out" d="M86 158 C68 188 60 218 64 246"/>
+      <path class="arm-in"  d="M86 158 C68 188 60 218 64 246"/>
+      <ellipse class="outline" fill="var(--grape)" cx="64" cy="256" rx="20" ry="22"/>
+      <g class="finger">
+        <path d="M54 272 C53 262 54 254 56 248"/>
+        <path d="M64 276 C63 266 63 256 65 248"/>
+        <path d="M74 272 C74 262 73 254 72 248"/>
+      </g>
+    </g>
+    <g class="arm armR">
+      <g transform="matrix(-1 0 0 1 324 0)">
+        <path class="arm-out" d="M86 158 C68 188 60 218 64 246"/>
+        <path class="arm-in"  d="M86 158 C68 188 60 218 64 246"/>
+        <ellipse class="outline" fill="var(--grape)" cx="64" cy="256" rx="20" ry="22"/>
+        <g class="finger">
+          <path d="M54 272 C53 262 54 254 56 248"/>
+          <path d="M64 276 C63 266 63 256 65 248"/>
+          <path d="M74 272 C74 262 73 254 72 248"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- face -->
+    <g class="face">
+      <ellipse class="outline" fill="#FFFFFF" cx="133" cy="152" rx="26" ry="29"/>
+      <ellipse class="outline" fill="#FFFFFF" cx="185" cy="152" rx="26" ry="29"/>
+      <g class="pupils">
+        <g clip-path="url(#gw-eyeL)">
+          <ellipse cx="141" cy="155" rx="20" ry="23" fill="var(--ink)"/>
+        </g>
+        <g clip-path="url(#gw-eyeR)">
+          <ellipse cx="193" cy="155" rx="20" ry="23" fill="var(--ink)"/>
+        </g>
+      </g>
+      <g clip-path="url(#gw-eyeL)"><rect class="lid lidL" x="100" y="118" width="70" height="66" fill="var(--deep)"/></g>
+      <g clip-path="url(#gw-eyeR)"><rect class="lid lidR" x="152" y="118" width="70" height="66" fill="var(--deep)"/></g>
+      <ellipse class="outline" fill="none" cx="133" cy="152" rx="26" ry="29"/>
+      <ellipse class="outline" fill="none" cx="185" cy="152" rx="26" ry="29"/>
+
+      <path class="outline" fill="var(--deep)" d="M128 192 C148 186 176 187 196 193 C200 220 186 240 162 240 C138 240 126 218 128 192 Z"/>
+      <g clip-path="url(#gw-mouth)"><ellipse cx="172" cy="236" rx="24" ry="13" fill="var(--tongue)"/></g>
+    </g>
+  </g>
+</svg>
