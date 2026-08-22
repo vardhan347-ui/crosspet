@@ -1,19 +1,8 @@
 {
-  "pages": [
-    {
-      "id": "page-1",
-      "name": "Lavender glass"
-    },
-    {
-      "id": "page-2",
-      "name": "Trippin blue"
-    }
-  ],
   "artboards": [
     {
       "file": "Main.dc.html",
-      "title": "Today",
-      "page": "page-1",
+      "title": "A \u00b7 Today",
       "x": 0,
       "y": 0,
       "w": 390,
@@ -21,8 +10,7 @@
     },
     {
       "file": "MealDetail.dc.html",
-      "title": "Meal detail",
-      "page": "page-1",
+      "title": "A \u00b7 Meal detail",
       "x": 490,
       "y": 0,
       "w": 390,
@@ -30,8 +18,7 @@
     },
     {
       "file": "Journal.dc.html",
-      "title": "Day journal",
-      "page": "page-1",
+      "title": "A \u00b7 Day journal",
       "x": 980,
       "y": 0,
       "w": 390,
@@ -39,34 +26,46 @@
     },
     {
       "file": "TodayBlue.dc.html",
-      "title": "Today",
-      "page": "page-2",
+      "title": "B \u00b7 Today",
       "x": 0,
-      "y": 0,
+      "y": 1000,
       "w": 390,
       "h": 844
     },
     {
       "file": "MealDetailBlue.dc.html",
-      "title": "Meal detail",
-      "page": "page-2",
+      "title": "B \u00b7 Meal detail",
       "x": 490,
-      "y": 0,
+      "y": 1000,
       "w": 390,
       "h": 844
     },
     {
       "file": "JournalBlue.dc.html",
-      "title": "Day journal",
-      "page": "page-2",
+      "title": "B \u00b7 Day journal",
       "x": 980,
-      "y": 0,
+      "y": 1000,
       "w": 390,
       "h": 844
     }
   ],
+  "annotations": [
+    {
+      "id": "dir-a",
+      "x": -320,
+      "y": 40,
+      "w": 240,
+      "text": "Direction A \u2014 Lavender glass\n\nGlassmorphic cards, 3D gradient spheres, near-black floating nav.\nSchibsted Grotesk + Manrope."
+    },
+    {
+      "id": "dir-b",
+      "x": -320,
+      "y": 1040,
+      "w": 240,
+      "text": "Direction B \u2014 Trippin blue\n\nWhite cards on pale blue, flat vector illustration, gradient pill buttons, navy pill nav.\nArchivo (Helvetica Now stand-in)."
+    }
+  ],
   "launch": {
-    "view": "canvas",
-    "page": "page-2"
+    "view": "canvas"
   }
 }
