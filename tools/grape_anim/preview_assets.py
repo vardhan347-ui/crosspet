@@ -12,6 +12,8 @@ strip = Image.new('RGBA', (pw * N, PH), (0, 0, 0, 0))
 for i, f in enumerate(frames):
     strip.paste(f.resize((pw, PH), Image.LANCZOS), (i * pw, 0))
 strip.save('out/web/strip_small.png', optimize=True)
+# webp keeps alpha and is ~10x smaller as a data: URI
+strip.save('out/web/strip_small.webp', quality=90, method=6)
 
 RIG = ['body', 'leg_tube', 'leg_shoe', 'arm_hang', 'vine', 'leaf',
        'eyes_happy', 'eyes_closed', 'mouth_open_big']
