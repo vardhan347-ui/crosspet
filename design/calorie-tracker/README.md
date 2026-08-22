@@ -3,9 +3,10 @@
 Three mobile screens (390x844) for a calorie tracking app, drafted as a Claude
 Design canvas. Not part of the CrossPet firmware — design exploration only.
 
-Two visual directions of the same three screens, on two canvas pages.
+Three visual directions of the same three screens, laid out as three rows
+on one canvas.
 
-## Direction A — "Lavender glass" (page 1)
+## Direction A — "Lavender glass"
 
 | File | Screen |
 |------|--------|
@@ -16,7 +17,7 @@ Two visual directions of the same three screens, on two canvas pages.
 Glassmorphic lavender/blush/sage cards, near-black floating nav, Schibsted
 Grotesk display over Manrope UI text, 3D gradient-sphere imagery.
 
-## Direction B — "Trippin blue" (page 2)
+## Direction B — "Trippin blue"
 
 | File | Screen |
 |------|--------|
@@ -30,7 +31,20 @@ gradient pill buttons, navy pill nav with a label on the active tab, flat vector
 illustration. Type is Archivo, the closest freely-available stand-in for
 Helvetica Now Display (the fallback stack is Helvetica Neue/Helvetica/Arial).
 
-`canvas.json` holds the page split and artboard layout for both.
+## Direction C — "Cargo dark"
+
+| File | Screen |
+|------|--------|
+| `TodayDark.dc.html` | Today — intake card with meal stepper, macro tiles, meal cards |
+| `MealDetailDark.dc.html` | Meal detail — order-style header card and nutrition card |
+| `JournalDark.dc.html` | Day journal — day strip, entry rows, remaining bar |
+
+Near-black cards (`#1A2329`) on `#10161A`, lemon-yellow accent `#EFE23C`, dotted
+stepper progress, circular icon buttons, one card per screen inverted to solid
+yellow with dark text. Type is Outfit. Thumbnails are flat SVG, tuned for the
+dark ground.
+
+`canvas.json` holds the row layout and the direction notes.
 
 All imagery is inline SVG, so nothing loads over the network.
 

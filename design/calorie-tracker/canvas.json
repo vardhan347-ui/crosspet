@@ -47,6 +47,30 @@
       "y": 1000,
       "w": 390,
       "h": 844
+    },
+    {
+      "file": "TodayDark.dc.html",
+      "title": "C \u00b7 Today",
+      "x": 0,
+      "y": 2000,
+      "w": 390,
+      "h": 844
+    },
+    {
+      "file": "MealDetailDark.dc.html",
+      "title": "C \u00b7 Meal detail",
+      "x": 490,
+      "y": 2000,
+      "w": 390,
+      "h": 844
+    },
+    {
+      "file": "JournalDark.dc.html",
+      "title": "C \u00b7 Day journal",
+      "x": 980,
+      "y": 2000,
+      "w": 390,
+      "h": 844
     }
   ],
   "annotations": [
@@ -63,6 +87,13 @@
       "y": 1040,
       "w": 240,
       "text": "Direction B \u2014 Trippin blue\n\nWhite cards on pale blue, flat vector illustration, gradient pill buttons, navy pill nav.\nArchivo (Helvetica Now stand-in)."
+    },
+    {
+      "id": "dir-c",
+      "x": -320,
+      "y": 2040,
+      "w": 240,
+      "text": "Direction C \u2014 Cargo dark\n\nNear-black cards, lemon-yellow accent, stepper progress, circular icon buttons, one card inverted to solid yellow.\nOutfit."
     }
   ],
   "launch": {
