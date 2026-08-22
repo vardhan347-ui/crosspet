@@ -1,8 +1,72 @@
 {
-  "artboards": [
-    { "file": "Main.dc.html", "title": "Today", "x": 0, "y": 0, "w": 390, "h": 844 },
-    { "file": "MealDetail.dc.html", "title": "Meal detail", "x": 490, "y": 0, "w": 390, "h": 844 },
-    { "file": "Journal.dc.html", "title": "Day journal", "x": 980, "y": 0, "w": 390, "h": 844 }
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Lavender glass"
+    },
+    {
+      "id": "page-2",
+      "name": "Trippin blue"
+    }
   ],
-  "launch": { "view": "canvas" }
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "title": "Today",
+      "page": "page-1",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 844
+    },
+    {
+      "file": "MealDetail.dc.html",
+      "title": "Meal detail",
+      "page": "page-1",
+      "x": 490,
+      "y": 0,
+      "w": 390,
+      "h": 844
+    },
+    {
+      "file": "Journal.dc.html",
+      "title": "Day journal",
+      "page": "page-1",
+      "x": 980,
+      "y": 0,
+      "w": 390,
+      "h": 844
+    },
+    {
+      "file": "TodayBlue.dc.html",
+      "title": "Today",
+      "page": "page-2",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 844
+    },
+    {
+      "file": "MealDetailBlue.dc.html",
+      "title": "Meal detail",
+      "page": "page-2",
+      "x": 490,
+      "y": 0,
+      "w": 390,
+      "h": 844
+    },
+    {
+      "file": "JournalBlue.dc.html",
+      "title": "Day journal",
+      "page": "page-2",
+      "x": 980,
+      "y": 0,
+      "w": 390,
+      "h": 844
+    }
+  ],
+  "launch": {
+    "view": "canvas",
+    "page": "page-2"
+  }
 }
