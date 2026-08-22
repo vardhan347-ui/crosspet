@@ -1,0 +1,8 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "title": "Today", "x": 0, "y": 0, "w": 390, "h": 844 },
+    { "file": "MealDetail.dc.html", "title": "Meal detail", "x": 490, "y": 0, "w": 390, "h": 844 },
+    { "file": "Journal.dc.html", "title": "Day journal", "x": 980, "y": 0, "w": 390, "h": 844 }
+  ],
+  "launch": { "view": "canvas" }
+}
