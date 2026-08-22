@@ -3,10 +3,11 @@
 Three mobile screens (390x844) for a calorie tracking app, drafted as a Claude
 Design canvas. Not part of the CrossPet firmware — design exploration only.
 
-Five visual directions of the same three screens, laid out as five rows
-on one canvas. Direction E carries a fourth screen.
+Directions A and B are the shortlist, each in light and dark, on canvas page 1.
+Directions C, D and E are kept for reference on page 2. Direction E carries a
+fourth screen.
 
-## Direction A — "Lavender glass"
+## Direction A — "Lavender glass" (shortlisted)
 
 | File | Screen |
 |------|--------|
@@ -17,7 +18,12 @@ on one canvas. Direction E carries a fourth screen.
 Glassmorphic lavender/blush/sage cards, near-black floating nav, Schibsted
 Grotesk display over Manrope UI text, 3D gradient-sphere imagery.
 
-## Direction B — "Trippin blue"
+Dark: `TodayGlassNight.dc.html`, `MealDetailGlassNight.dc.html`,
+`JournalGlassNight.dc.html`. Deep plum ground, glass panels dropped to 6-10%
+white, borders lifted to 11%, near-black chips inverted to light, accent
+raised to `#B18BE0`. The gradient spheres carry over unchanged.
+
+## Direction B — "Trippin blue" (shortlisted)
 
 | File | Screen |
 |------|--------|
@@ -31,7 +37,12 @@ gradient pill buttons, navy pill nav with a label on the active tab, flat vector
 illustration. Type is Archivo, the closest freely-available stand-in for
 Helvetica Now Display (the fallback stack is Helvetica Neue/Helvetica/Arial).
 
-## Direction C — "Cargo dark"
+Dark: `TodayBlueNight.dc.html`, `MealDetailBlueNight.dc.html`,
+`JournalBlueNight.dc.html`. Midnight Blue extended down to a `#0B111F` ground
+with `#141D31` cards; Blue Ribbon and Persimmon are unchanged, the tag pills
+become translucent, and the navy nav pill inverts to light.
+
+## Direction C — "Cargo dark" (set aside)
 
 | File | Screen |
 |------|--------|
@@ -44,7 +55,7 @@ stepper progress, circular icon buttons, one card per screen inverted to solid
 yellow with dark text. Type is Outfit. Thumbnails are flat SVG, tuned for the
 dark ground.
 
-## Direction D — "Industrial light"
+## Direction D — "Industrial light" (set aside)
 
 | File | Screen |
 |------|--------|
@@ -57,7 +68,7 @@ status pills carrying a coloured bar (green logged / red planned), and
 shaded 3D-style objects drawn as gradient SVG. Type pairs Instrument Serif
 (all numerals and titles) with Instrument Sans (labels and UI).
 
-## Direction E — "Playful pastel"
+## Direction E — "Playful pastel" (set aside)
 
 | File | Screen |
 |------|--------|
@@ -73,7 +84,7 @@ style guide specifies. The check-in screen is a post-meal satiety prompt —
 the direction's signature screen, which the other directions have no
 equivalent for.
 
-`canvas.json` holds the row layout and the direction notes.
+`canvas.json` holds the page split, row layout and the direction notes.
 
 All imagery is inline SVG, so nothing loads over the network.
 

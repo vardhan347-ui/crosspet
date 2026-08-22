@@ -1,8 +1,19 @@
 {
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "A & B \u2014 light + dark"
+    },
+    {
+      "id": "page-2",
+      "name": "Set aside (C, D, E)"
+    }
+  ],
   "artboards": [
     {
       "file": "Main.dc.html",
-      "title": "A \u00b7 Today",
+      "title": "A light \u00b7 Today",
+      "page": "page-1",
       "x": 0,
       "y": 0,
       "w": 390,
@@ -10,7 +21,8 @@
     },
     {
       "file": "MealDetail.dc.html",
-      "title": "A \u00b7 Meal detail",
+      "title": "A light \u00b7 Meal detail",
+      "page": "page-1",
       "x": 490,
       "y": 0,
       "w": 390,
@@ -18,155 +30,229 @@
     },
     {
       "file": "Journal.dc.html",
-      "title": "A \u00b7 Day journal",
+      "title": "A light \u00b7 Day journal",
+      "page": "page-1",
       "x": 980,
       "y": 0,
       "w": 390,
       "h": 844
     },
     {
-      "file": "TodayBlue.dc.html",
-      "title": "B \u00b7 Today",
+      "file": "TodayGlassNight.dc.html",
+      "title": "A dark \u00b7 Today",
+      "page": "page-1",
       "x": 0,
       "y": 1000,
       "w": 390,
       "h": 844
     },
     {
-      "file": "MealDetailBlue.dc.html",
-      "title": "B \u00b7 Meal detail",
+      "file": "MealDetailGlassNight.dc.html",
+      "title": "A dark \u00b7 Meal detail",
+      "page": "page-1",
       "x": 490,
       "y": 1000,
       "w": 390,
       "h": 844
     },
     {
-      "file": "JournalBlue.dc.html",
-      "title": "B \u00b7 Day journal",
+      "file": "JournalGlassNight.dc.html",
+      "title": "A dark \u00b7 Day journal",
+      "page": "page-1",
       "x": 980,
       "y": 1000,
+      "w": 390,
+      "h": 844
+    },
+    {
+      "file": "TodayBlue.dc.html",
+      "title": "B light \u00b7 Today",
+      "page": "page-1",
+      "x": 0,
+      "y": 2000,
+      "w": 390,
+      "h": 844
+    },
+    {
+      "file": "MealDetailBlue.dc.html",
+      "title": "B light \u00b7 Meal detail",
+      "page": "page-1",
+      "x": 490,
+      "y": 2000,
+      "w": 390,
+      "h": 844
+    },
+    {
+      "file": "JournalBlue.dc.html",
+      "title": "B light \u00b7 Day journal",
+      "page": "page-1",
+      "x": 980,
+      "y": 2000,
+      "w": 390,
+      "h": 844
+    },
+    {
+      "file": "TodayBlueNight.dc.html",
+      "title": "B dark \u00b7 Today",
+      "page": "page-1",
+      "x": 0,
+      "y": 3000,
+      "w": 390,
+      "h": 844
+    },
+    {
+      "file": "MealDetailBlueNight.dc.html",
+      "title": "B dark \u00b7 Meal detail",
+      "page": "page-1",
+      "x": 490,
+      "y": 3000,
+      "w": 390,
+      "h": 844
+    },
+    {
+      "file": "JournalBlueNight.dc.html",
+      "title": "B dark \u00b7 Day journal",
+      "page": "page-1",
+      "x": 980,
+      "y": 3000,
       "w": 390,
       "h": 844
     },
     {
       "file": "TodayDark.dc.html",
       "title": "C \u00b7 Today",
+      "page": "page-2",
       "x": 0,
-      "y": 2000,
+      "y": 0,
       "w": 390,
       "h": 844
     },
     {
       "file": "MealDetailDark.dc.html",
       "title": "C \u00b7 Meal detail",
+      "page": "page-2",
       "x": 490,
-      "y": 2000,
+      "y": 0,
       "w": 390,
       "h": 844
     },
     {
       "file": "JournalDark.dc.html",
       "title": "C \u00b7 Day journal",
+      "page": "page-2",
       "x": 980,
-      "y": 2000,
+      "y": 0,
       "w": 390,
       "h": 844
     },
     {
       "file": "TodayLight.dc.html",
       "title": "D \u00b7 Today",
+      "page": "page-2",
       "x": 0,
-      "y": 3000,
+      "y": 1000,
       "w": 390,
       "h": 844
     },
     {
       "file": "MealDetailLight.dc.html",
       "title": "D \u00b7 Meal detail",
+      "page": "page-2",
       "x": 490,
-      "y": 3000,
+      "y": 1000,
       "w": 390,
       "h": 844
     },
     {
       "file": "JournalLight.dc.html",
       "title": "D \u00b7 Day journal",
+      "page": "page-2",
       "x": 980,
-      "y": 3000,
+      "y": 1000,
       "w": 390,
       "h": 844
     },
     {
       "file": "TodayPlay.dc.html",
       "title": "E \u00b7 Today",
+      "page": "page-2",
       "x": 0,
-      "y": 4000,
+      "y": 2000,
       "w": 390,
       "h": 844
     },
     {
       "file": "MealDetailPlay.dc.html",
       "title": "E \u00b7 Meal detail",
+      "page": "page-2",
       "x": 490,
-      "y": 4000,
+      "y": 2000,
       "w": 390,
       "h": 844
     },
     {
       "file": "JournalPlay.dc.html",
       "title": "E \u00b7 Day journal",
+      "page": "page-2",
       "x": 980,
-      "y": 4000,
+      "y": 2000,
       "w": 390,
       "h": 844
     },
     {
       "file": "CheckInPlay.dc.html",
       "title": "E \u00b7 Check-in",
+      "page": "page-2",
       "x": 1470,
-      "y": 4000,
+      "y": 2000,
       "w": 390,
       "h": 844
     }
   ],
   "annotations": [
     {
-      "id": "dir-a",
+      "id": "a-light",
+      "page": "page-1",
       "x": -320,
       "y": 40,
       "w": 240,
-      "text": "Direction A \u2014 Lavender glass\n\nGlassmorphic cards, 3D gradient spheres, near-black floating nav.\nSchibsted Grotesk + Manrope."
+      "text": "A \u2014 Lavender glass, light\n\nGlassmorphic cards on a lavender gradient, 3D gradient spheres, near-black floating nav.\nSchibsted Grotesk + Manrope."
     },
     {
-      "id": "dir-b",
+      "id": "a-dark",
+      "page": "page-1",
       "x": -320,
       "y": 1040,
       "w": 240,
-      "text": "Direction B \u2014 Trippin blue\n\nWhite cards on pale blue, flat vector illustration, gradient pill buttons, navy pill nav.\nArchivo (Helvetica Now stand-in)."
+      "text": "A \u2014 Lavender glass, dark\n\nDeep plum ground; the glass panels drop to 6\u201310% white, the jewel spheres carry unchanged, and every near-black chip inverts to light.\nAccent lifts to #B18BE0 so it still reads."
     },
     {
-      "id": "dir-c",
+      "id": "b-light",
+      "page": "page-1",
       "x": -320,
       "y": 2040,
       "w": 240,
-      "text": "Direction C \u2014 Cargo dark\n\nNear-black cards, lemon-yellow accent, stepper progress, circular icon buttons, one card inverted to solid yellow.\nOutfit."
+      "text": "B \u2014 Trippin blue, light\n\nWhite cards on pale blue, flat vector illustration, gradient pill buttons, navy pill nav.\nArchivo (Helvetica Now stand-in)."
     },
     {
-      "id": "dir-d",
+      "id": "b-dark",
+      "page": "page-1",
       "x": -320,
       "y": 3040,
       "w": 240,
-      "text": "Direction D \u2014 Industrial light\n\nNear-white ground, bordered white cards, amber accent, status pills with colour bars, shaded 3D-style objects.\nInstrument Serif numerals + Instrument Sans."
+      "text": "B \u2014 Trippin blue, dark\n\nMidnight Blue taken all the way down (#0B111F ground, #141D31 cards). Blue Ribbon and Persimmon are unchanged \u2014 both were already built for dark. The navy nav pill inverts to light."
     },
     {
-      "id": "dir-e",
+      "id": "set-aside",
+      "page": "page-2",
       "x": -320,
-      "y": 4040,
+      "y": 40,
       "w": 240,
-      "text": "Direction E \u2014 Playful pastel\n\nBlack ground, four brand pastels, stacked colour cards, character faces, tick slider.\nPoppins.\n\nFourth screen: the satiety check-in, this direction's signature."
+      "text": "Set aside\n\nC \u2014 Cargo dark (Outfit, lemon yellow)\nD \u2014 Industrial light (Instrument Serif, amber)\nE \u2014 Playful pastel (Poppins, four pastels)\n\nKept for reference; not carried into dark mode."
     }
   ],
   "launch": {
-    "view": "canvas"
+    "view": "canvas",
+    "page": "page-1"
   }
 }
