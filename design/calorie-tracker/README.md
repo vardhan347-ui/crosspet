@@ -3,8 +3,8 @@
 Three mobile screens (390x844) for a calorie tracking app, drafted as a Claude
 Design canvas. Not part of the CrossPet firmware — design exploration only.
 
-Four visual directions of the same three screens, laid out as four rows
-on one canvas.
+Five visual directions of the same three screens, laid out as five rows
+on one canvas. Direction E carries a fourth screen.
 
 ## Direction A — "Lavender glass"
 
@@ -56,6 +56,22 @@ Near-white ground `#F6F6F6` with bordered white cards, amber accent `#F7B500`,
 status pills carrying a coloured bar (green logged / red planned), and
 shaded 3D-style objects drawn as gradient SVG. Type pairs Instrument Serif
 (all numerals and titles) with Instrument Sans (labels and UI).
+
+## Direction E — "Playful pastel"
+
+| File | Screen |
+|------|--------|
+| `TodayPlay.dc.html` | Today — greeting, search, two colour cards, meal rows |
+| `MealDetailPlay.dc.html` | Meal detail — stacked colour ingredient cards |
+| `JournalPlay.dc.html` | Day journal — avatar, week bars with face markers, meal rows |
+| `CheckInPlay.dc.html` | Check-in — full-bleed colour, character face, tick slider |
+
+Black ground with the four brand pastels (`#9cacff`, `#ffcc90`, `#80d8b8`,
+`#f894c4`), overlapping colour cards, white circular arrow buttons, and
+hand-drawn character faces in bold black outline. Type is Poppins, as the
+style guide specifies. The check-in screen is a post-meal satiety prompt —
+the direction's signature screen, which the other directions have no
+equivalent for.
 
 `canvas.json` holds the row layout and the direction notes.
 

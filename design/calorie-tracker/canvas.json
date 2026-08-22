@@ -95,6 +95,38 @@
       "y": 3000,
       "w": 390,
       "h": 844
+    },
+    {
+      "file": "TodayPlay.dc.html",
+      "title": "E \u00b7 Today",
+      "x": 0,
+      "y": 4000,
+      "w": 390,
+      "h": 844
+    },
+    {
+      "file": "MealDetailPlay.dc.html",
+      "title": "E \u00b7 Meal detail",
+      "x": 490,
+      "y": 4000,
+      "w": 390,
+      "h": 844
+    },
+    {
+      "file": "JournalPlay.dc.html",
+      "title": "E \u00b7 Day journal",
+      "x": 980,
+      "y": 4000,
+      "w": 390,
+      "h": 844
+    },
+    {
+      "file": "CheckInPlay.dc.html",
+      "title": "E \u00b7 Check-in",
+      "x": 1470,
+      "y": 4000,
+      "w": 390,
+      "h": 844
     }
   ],
   "annotations": [
@@ -125,6 +157,13 @@
       "y": 3040,
       "w": 240,
       "text": "Direction D \u2014 Industrial light\n\nNear-white ground, bordered white cards, amber accent, status pills with colour bars, shaded 3D-style objects.\nInstrument Serif numerals + Instrument Sans."
+    },
+    {
+      "id": "dir-e",
+      "x": -320,
+      "y": 4040,
+      "w": 240,
+      "text": "Direction E \u2014 Playful pastel\n\nBlack ground, four brand pastels, stacked colour cards, character faces, tick slider.\nPoppins.\n\nFourth screen: the satiety check-in, this direction's signature."
     }
   ],
   "launch": {

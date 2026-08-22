@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap">
+  <style>
+    body { margin: 0; font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #9CACFF; } a:hover { color: #FFFFFF; }
+  </style>
+</helmet>
+
+<div style="position: relative; width: 390px; height: 844px; overflow: hidden; background: #000000; color: #FFFFFF;">
+
+  <!-- avatar -->
+  <div style="display: flex; justify-content: center; padding-top: 30px;">
+    <div style="width: 92px; height: 92px; border-radius: 46px; overflow: hidden; background: {{accent}};">
+      <svg viewBox="0 0 92 92" width="92" height="92">
+        <ellipse cx="34" cy="40" rx="7" ry="10" fill="#111111"></ellipse>
+        <ellipse cx="58" cy="40" rx="7" ry="10" fill="#111111"></ellipse>
+        <circle cx="36.5" cy="35" r="2.6" fill="#FFFFFF"></circle>
+        <circle cx="60.5" cy="35" r="2.6" fill="#FFFFFF"></circle>
+        <path d="M34 60 Q 46 72 58 60" fill="none" stroke="#111111" stroke-width="4" stroke-linecap="round"></path>
+        <ellipse cx="19" cy="56" rx="9.5" ry="4.6" fill="#E06A48"></ellipse>
+        <ellipse cx="73" cy="56" rx="9.5" ry="4.6" fill="#E06A48"></ellipse>
+      </svg>
+    </div>
+  </div>
+  <div style="margin-top: 14px; text-align: center; font-size: 21px; font-weight: 600;">Anna Wilson</div>
+
+  <!-- week chart -->
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; margin: 26px 24px 0; height: 196px;">
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <svg width="32" height="32" viewBox="0 0 32 32" style="margin-bottom: -16px; position: relative; z-index: 1;"><circle cx="16" cy="16" r="16" fill="#80D8B8"></circle><circle cx="11" cy="13" r="2.2" fill="#111111"></circle><circle cx="21" cy="13" r="2.2" fill="#111111"></circle><path d="M11 20 Q 16 25 21 20" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round"></path></svg>
+      <div style="width: 26px; height: 146px; border-radius: 13px; background: #80D8B8; opacity: 0.72;"></div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <svg width="32" height="32" viewBox="0 0 32 32" style="margin-bottom: -16px; position: relative; z-index: 1;"><circle cx="16" cy="16" r="16" fill="#9CACFF"></circle><circle cx="11" cy="13" r="2.2" fill="#111111"></circle><circle cx="21" cy="13" r="2.2" fill="#111111"></circle><path d="M11 23 Q 16 18 21 23" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round"></path></svg>
+      <div style="width: 26px; height: 105px; border-radius: 13px; background: #9CACFF; opacity: 0.72;"></div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <svg width="32" height="32" viewBox="0 0 32 32" style="margin-bottom: -16px; position: relative; z-index: 1;"><circle cx="16" cy="16" r="16" fill="#FFCC90"></circle><circle cx="11" cy="13" r="2.2" fill="#111111"></circle><circle cx="21" cy="13" r="2.2" fill="#111111"></circle><path d="M11 21.5h10" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round"></path></svg>
+      <div style="width: 26px; height: 163px; border-radius: 13px; background: #FFCC90; opacity: 0.72;"></div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <svg width="32" height="32" viewBox="0 0 32 32" style="margin-bottom: -16px; position: relative; z-index: 1;"><circle cx="16" cy="16" r="16" fill="#F894C4"></circle><circle cx="11" cy="13" r="2.2" fill="#111111"></circle><circle cx="21" cy="13" r="2.2" fill="#111111"></circle><path d="M11 23 Q 16 18 21 23" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round"></path></svg>
+      <div style="width: 26px; height: 87px; border-radius: 13px; background: #F894C4; opacity: 0.72;"></div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <svg width="32" height="32" viewBox="0 0 32 32" style="margin-bottom: -16px; position: relative; z-index: 1;"><circle cx="16" cy="16" r="16" fill="#80D8B8"></circle><circle cx="11" cy="13" r="2.2" fill="#111111"></circle><circle cx="21" cy="13" r="2.2" fill="#111111"></circle><path d="M11 20 Q 16 25 21 20" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round"></path></svg>
+      <div style="width: 26px; height: 151px; border-radius: 13px; background: #80D8B8; opacity: 0.72;"></div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <svg width="32" height="32" viewBox="0 0 32 32" style="margin-bottom: -16px; position: relative; z-index: 1;"><circle cx="16" cy="16" r="16" fill="#C9B79A"></circle><circle cx="11" cy="13" r="2.2" fill="#111111"></circle><circle cx="21" cy="13" r="2.2" fill="#111111"></circle><path d="M11 21.5h10" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round"></path></svg>
+      <div style="width: 26px; height: 172px; border-radius: 13px; background: #C9B79A; opacity: 0.72;"></div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <svg width="32" height="32" viewBox="0 0 32 32" style="margin-bottom: -16px; position: relative; z-index: 1;"><circle cx="16" cy="16" r="16" fill="#FFCC90"></circle><circle cx="11" cy="13" r="2.2" fill="#111111"></circle><circle cx="21" cy="13" r="2.2" fill="#111111"></circle><path d="M11 20 Q 16 25 21 20" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round"></path></svg>
+      <div style="width: 26px; height: 116px; border-radius: 13px; background: #FFCC90; opacity: 0.72;"></div>
+    </div>
+  </div>
+
+  <div style="display: flex; justify-content: space-between; margin: 10px 24px 0;">
+    <div style="width: 32px; text-align: center; font-size: 12.5px; font-weight: 400; color: #8A8A8A;">Sun</div>
+    <div style="width: 32px; text-align: center; font-size: 12.5px; font-weight: 400; color: #8A8A8A;">Mon</div>
+    <div style="width: 32px; text-align: center; font-size: 12.5px; font-weight: 400; color: #8A8A8A;">Tue</div>
+    <div style="width: 32px; text-align: center; font-size: 12.5px; font-weight: 400; color: #8A8A8A;">Wed</div>
+    <div style="width: 32px; text-align: center; font-size: 12.5px; font-weight: 400; color: #8A8A8A;">Thu</div>
+    <div style="width: 32px; text-align: center; font-size: 12.5px; font-weight: 400; color: #8A8A8A;">Fri</div>
+    <div style="width: 32px; text-align: center; font-size: 12.5px; font-weight: 500; color: #FFFFFF;">Sat</div>
+  </div>
+
+  <!-- today card -->
+  <div style="margin: 22px 24px 0; padding: 16px 18px; border-radius: 20px; background: #FFFFFF; color: #111111;">
+    <div style="font-size: 12.5px; font-weight: 400; color: #6E6E6E;">Today so far</div>
+    <div style="margin-top: 4px; font-size: 15px; font-weight: 500; line-height: 1.45;">1,558 of 2,300 kcal. Protein is on track — 742 left for dinner.</div>
+  </div>
+
+  <!-- meal rows -->
+  <div style="margin: 14px 24px 0; border-radius: 20px; background: #1C1C1C; overflow: hidden;">
+    <div style="display: flex; align-items: center; gap: 14px; padding: 0 16px; height: 58px; border-bottom: 1px solid #2A2A2A;">
+      <div style="flex-shrink: 0; width: 26px; height: 26px; border-radius: 13px; background: #FFCC90;"></div>
+      <div style="flex-grow: 1; font-size: 14.5px; font-weight: 400;">Overnight Oats</div>
+      <div style="font-size: 14.5px; font-weight: 500;">412</div>
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 5l7 7-7 7"></path></svg>
+    </div>
+    <div style="display: flex; align-items: center; gap: 14px; padding: 0 16px; height: 58px; border-bottom: 1px solid #2A2A2A;">
+      <div style="flex-shrink: 0; width: 26px; height: 26px; border-radius: 13px; background: #80D8B8;"></div>
+      <div style="flex-grow: 1; font-size: 14.5px; font-weight: 400;">Grilled Chicken Bowl</div>
+      <div style="font-size: 14.5px; font-weight: 500;">613</div>
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 5l7 7-7 7"></path></svg>
+    </div>
+    <div style="display: flex; align-items: center; gap: 14px; padding: 0 16px; height: 58px;">
+      <div style="flex-shrink: 0; width: 26px; height: 26px; border-radius: 13px; background: #F894C4;"></div>
+      <div style="flex-grow: 1; font-size: 14.5px; font-weight: 400;">Almonds &amp; Apple</div>
+      <div style="font-size: 14.5px; font-weight: 500;">248</div>
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 5l7 7-7 7"></path></svg>
+    </div>
+  </div>
+
+  <!-- tab bar -->
+  <div style="position: absolute; left: 0; right: 0; bottom: 26px; display: flex; align-items: center; justify-content: space-around; padding: 0 26px;">
+    <div style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5C5C5C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 5l8 6.5V18a1.5 1.5 0 01-1.5 1.5h-13A1.5 1.5 0 014 18z"></path></svg>
+    </div>
+    <div style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5C5C5C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"></circle><path d="M15 9l-2 4-4 2 2-4z"></path></svg>
+    </div>
+    <div style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5C5C5C" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 4.5h11v15l-5.5-4-5.5 4z"></path></svg>
+    </div>
+    <div style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8.5" r="3.8"></circle><path d="M5 19.5a7 7 0 0114 0"></path></svg>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#FFCC90","options":["#FFCC90","#9CACFF","#80D8B8","#F894C4"],"section":"Theme"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#FFCC90' };
+  }
+}
+</script>
+</body>
+</html>
