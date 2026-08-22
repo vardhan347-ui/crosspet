@@ -3,7 +3,7 @@ import os, base64, json
 from PIL import Image
 
 os.makedirs('out/web', exist_ok=True)
-N, PH = 24, 300                                   # preview frame height
+N, PH = 24, 360                                   # preview frame height
 
 frames = [Image.open(f'out/frames/walk_{i:02d}.png') for i in range(N)]
 w0, h0 = frames[0].size

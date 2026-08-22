@@ -61,6 +61,7 @@ dark background into the outlines.
 pip install pillow numpy
 python3 build.py            # frames + gif + webp + sheet + strip
 python3 preview_assets.py   # small copies used by the preview page
+python3 make_page.py        # self-contained HTML preview, assets inlined
 ```
 
 `extract_parts.py <sheet.png>` only needs re-running if the parts sheet itself
