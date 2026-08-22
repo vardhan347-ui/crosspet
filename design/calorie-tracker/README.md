@@ -3,7 +3,7 @@
 Three mobile screens (390x844) for a calorie tracking app, drafted as a Claude
 Design canvas. Not part of the CrossPet firmware — design exploration only.
 
-Three visual directions of the same three screens, laid out as three rows
+Four visual directions of the same three screens, laid out as four rows
 on one canvas.
 
 ## Direction A — "Lavender glass"
@@ -43,6 +43,19 @@ Near-black cards (`#1A2329`) on `#10161A`, lemon-yellow accent `#EFE23C`, dotted
 stepper progress, circular icon buttons, one card per screen inverted to solid
 yellow with dark text. Type is Outfit. Thumbnails are flat SVG, tuned for the
 dark ground.
+
+## Direction D — "Industrial light"
+
+| File | Screen |
+|------|--------|
+| `TodayLight.dc.html` | Today — object hero, status card, 2-col meal grid |
+| `MealDetailLight.dc.html` | Meal detail — object hero, macro bars, ingredient grid |
+| `JournalLight.dc.html` | Day journal — day strip, progress card, entry rows |
+
+Near-white ground `#F6F6F6` with bordered white cards, amber accent `#F7B500`,
+status pills carrying a coloured bar (green logged / red planned), and
+shaded 3D-style objects drawn as gradient SVG. Type pairs Instrument Serif
+(all numerals and titles) with Instrument Sans (labels and UI).
 
 `canvas.json` holds the row layout and the direction notes.
 
