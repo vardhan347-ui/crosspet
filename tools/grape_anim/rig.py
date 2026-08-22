@@ -5,6 +5,13 @@ import numpy as np, math, os
 PARTS = 'parts'
 _cache = {}
 
+
+def set_parts_dir(path):
+    """Point the loader at a different character's cut-outs."""
+    global PARTS
+    PARTS = path
+    _cache.clear()
+
 def part(name):
     """Load a part as premultiplied float RGBA."""
     if name not in _cache:

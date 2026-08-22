@@ -55,6 +55,13 @@ Per frame, `walk.py`:
 canvas, in premultiplied alpha so bicubic resampling cannot bleed the sheet's
 dark background into the outlines.
 
+## The voxel version
+
+`voxel/` holds the same character in voxel form, walking the swagger from the
+`Bud_Leaf_2` Lottie rather than a hand-authored cycle — the reference's body,
+head, arm and sprig curves are read out of a real Lottie render and retargeted.
+See `voxel/README.md`.
+
 ## Rebuilding
 
 ```bash

@@ -1,0 +1,4 @@
+out/frames/
+out/grape_swagger_strip.png
+__pycache__/
+*.pyc
