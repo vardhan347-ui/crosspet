@@ -2,14 +2,10 @@
   "pages": [
     {
       "id": "page-1",
-      "name": "A & B \u2014 illustration"
+      "name": "A & B \u2014 light + dark"
     },
     {
       "id": "page-2",
-      "name": "A & B \u2014 voxel art"
-    },
-    {
-      "id": "page-3",
       "name": "Set aside (C, D, E)"
     }
   ],
@@ -123,117 +119,9 @@
       "h": 844
     },
     {
-      "file": "TodayGlassVox.dc.html",
-      "title": "A voxel light \u00b7 Today",
-      "page": "page-2",
-      "x": 0,
-      "y": 0,
-      "w": 390,
-      "h": 844
-    },
-    {
-      "file": "MealDetailGlassVox.dc.html",
-      "title": "A voxel light \u00b7 Meal detail",
-      "page": "page-2",
-      "x": 490,
-      "y": 0,
-      "w": 390,
-      "h": 844
-    },
-    {
-      "file": "JournalGlassVox.dc.html",
-      "title": "A voxel light \u00b7 Day journal",
-      "page": "page-2",
-      "x": 980,
-      "y": 0,
-      "w": 390,
-      "h": 844
-    },
-    {
-      "file": "TodayGlassVoxNight.dc.html",
-      "title": "A voxel dark \u00b7 Today",
-      "page": "page-2",
-      "x": 0,
-      "y": 1000,
-      "w": 390,
-      "h": 844
-    },
-    {
-      "file": "MealDetailGlassVoxNight.dc.html",
-      "title": "A voxel dark \u00b7 Meal detail",
-      "page": "page-2",
-      "x": 490,
-      "y": 1000,
-      "w": 390,
-      "h": 844
-    },
-    {
-      "file": "JournalGlassVoxNight.dc.html",
-      "title": "A voxel dark \u00b7 Day journal",
-      "page": "page-2",
-      "x": 980,
-      "y": 1000,
-      "w": 390,
-      "h": 844
-    },
-    {
-      "file": "TodayBlueVox.dc.html",
-      "title": "B voxel light \u00b7 Today",
-      "page": "page-2",
-      "x": 0,
-      "y": 2000,
-      "w": 390,
-      "h": 844
-    },
-    {
-      "file": "MealDetailBlueVox.dc.html",
-      "title": "B voxel light \u00b7 Meal detail",
-      "page": "page-2",
-      "x": 490,
-      "y": 2000,
-      "w": 390,
-      "h": 844
-    },
-    {
-      "file": "JournalBlueVox.dc.html",
-      "title": "B voxel light \u00b7 Day journal",
-      "page": "page-2",
-      "x": 980,
-      "y": 2000,
-      "w": 390,
-      "h": 844
-    },
-    {
-      "file": "TodayBlueVoxNight.dc.html",
-      "title": "B voxel dark \u00b7 Today",
-      "page": "page-2",
-      "x": 0,
-      "y": 3000,
-      "w": 390,
-      "h": 844
-    },
-    {
-      "file": "MealDetailBlueVoxNight.dc.html",
-      "title": "B voxel dark \u00b7 Meal detail",
-      "page": "page-2",
-      "x": 490,
-      "y": 3000,
-      "w": 390,
-      "h": 844
-    },
-    {
-      "file": "JournalBlueVoxNight.dc.html",
-      "title": "B voxel dark \u00b7 Day journal",
-      "page": "page-2",
-      "x": 980,
-      "y": 3000,
-      "w": 390,
-      "h": 844
-    },
-    {
       "file": "TodayDark.dc.html",
       "title": "C \u00b7 Today",
-      "page": "page-3",
+      "page": "page-2",
       "x": 0,
       "y": 0,
       "w": 390,
@@ -242,7 +130,7 @@
     {
       "file": "MealDetailDark.dc.html",
       "title": "C \u00b7 Meal detail",
-      "page": "page-3",
+      "page": "page-2",
       "x": 490,
       "y": 0,
       "w": 390,
@@ -251,7 +139,7 @@
     {
       "file": "JournalDark.dc.html",
       "title": "C \u00b7 Day journal",
-      "page": "page-3",
+      "page": "page-2",
       "x": 980,
       "y": 0,
       "w": 390,
@@ -260,7 +148,7 @@
     {
       "file": "TodayLight.dc.html",
       "title": "D \u00b7 Today",
-      "page": "page-3",
+      "page": "page-2",
       "x": 0,
       "y": 1000,
       "w": 390,
@@ -269,7 +157,7 @@
     {
       "file": "MealDetailLight.dc.html",
       "title": "D \u00b7 Meal detail",
-      "page": "page-3",
+      "page": "page-2",
       "x": 490,
       "y": 1000,
       "w": 390,
@@ -278,7 +166,7 @@
     {
       "file": "JournalLight.dc.html",
       "title": "D \u00b7 Day journal",
-      "page": "page-3",
+      "page": "page-2",
       "x": 980,
       "y": 1000,
       "w": 390,
@@ -287,7 +175,7 @@
     {
       "file": "TodayPlay.dc.html",
       "title": "E \u00b7 Today",
-      "page": "page-3",
+      "page": "page-2",
       "x": 0,
       "y": 2000,
       "w": 390,
@@ -296,7 +184,7 @@
     {
       "file": "MealDetailPlay.dc.html",
       "title": "E \u00b7 Meal detail",
-      "page": "page-3",
+      "page": "page-2",
       "x": 490,
       "y": 2000,
       "w": 390,
@@ -305,7 +193,7 @@
     {
       "file": "JournalPlay.dc.html",
       "title": "E \u00b7 Day journal",
-      "page": "page-3",
+      "page": "page-2",
       "x": 980,
       "y": 2000,
       "w": 390,
@@ -314,7 +202,7 @@
     {
       "file": "CheckInPlay.dc.html",
       "title": "E \u00b7 Check-in",
-      "page": "page-3",
+      "page": "page-2",
       "x": 1470,
       "y": 2000,
       "w": 390,
@@ -355,40 +243,16 @@
       "text": "B \u2014 Trippin blue, dark\n\nMidnight Blue taken all the way down (#0B111F ground, #141D31 cards). Blue Ribbon and Persimmon unchanged."
     },
     {
-      "id": "vox-note",
-      "page": "page-2",
-      "x": -320,
-      "y": 40,
-      "w": 240,
-      "text": "Voxel art\n\nSame two themes, same layouts \u2014 only the imagery changes.\n\nIsometric cubes on a 2:1 projection, three face shades per colour (top 1.16, right 0.86, left 0.64), each object on a square tray tile.\n\nModels are generated from a voxel grid, so bowl / apple / glass stay consistent at every size."
-    },
-    {
-      "id": "vox-a-dark",
-      "page": "page-2",
-      "x": -320,
-      "y": 1040,
-      "w": 240,
-      "text": "A voxel, dark\n\nThe voxel palette is self-lit, so the models carry into dark untouched \u2014 only the ground and chrome are remapped."
-    },
-    {
-      "id": "vox-b",
-      "page": "page-2",
-      "x": -320,
-      "y": 2040,
-      "w": 240,
-      "text": "B voxel\n\nModels re-keyed to Blue Ribbon and Persimmon. The flat-vector still-life, the top-down bowl and the card thumbnails are all replaced."
-    },
-    {
       "id": "set-aside",
-      "page": "page-3",
+      "page": "page-2",
       "x": -320,
       "y": 40,
       "w": 240,
-      "text": "Set aside\n\nC \u2014 Cargo dark (Outfit, lemon yellow)\nD \u2014 Industrial light (Instrument Serif, amber)\nE \u2014 Playful pastel (Poppins, four pastels)\n\nKept for reference; not carried into dark mode or voxel."
+      "text": "Set aside\n\nC \u2014 Cargo dark (Outfit, lemon yellow)\nD \u2014 Industrial light (Instrument Serif, amber)\nE \u2014 Playful pastel (Poppins, four pastels)\n\nKept for reference."
     }
   ],
   "launch": {
     "view": "canvas",
-    "page": "page-2"
+    "page": "page-1"
   }
 }

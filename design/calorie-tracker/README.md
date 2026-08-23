@@ -3,25 +3,9 @@
 Three mobile screens (390x844) for a calorie tracking app, drafted as a Claude
 Design canvas. Not part of the CrossPet firmware — design exploration only.
 
-Directions A and B are the shortlist. Canvas page 1 holds them in light and
-dark with their original illustration; page 2 holds the same two themes with
-voxel art; page 3 keeps directions C, D and E for reference. Direction E
-carries a fourth screen.
-
-## Voxel art
-
-`voxel_gen.py` renders the isometric models. Cubes use a 2:1 projection with
-three face shades per base colour (top x1.16, right x0.86, left x0.64), drawn
-back-to-front by `x + y + z`; fully-enclosed cubes are skipped. Models —
-bowl, apple, glass and a square tray tile — are defined on a voxel grid, so
-the same object stays consistent from a 44px card thumbnail up to a hero.
-Palettes are keyed per direction: magenta/violet for A, Blue Ribbon and
-Persimmon for B.
-
-Voxel screens are `*Vox.dc.html` (light) and `*VoxNight.dc.html` (dark). The
-voxel colours are deliberately disjoint from both dark-mode colour maps, so
-the models pass through the light-to-dark remap untouched — they are self-lit
-and need no dark variant.
+Directions A and B are the shortlist, each in light and dark, on canvas page 1.
+Directions C, D and E are kept for reference on page 2. Direction E carries a
+fourth screen.
 
 ## Direction A — "Lavender glass" (shortlisted)
 
