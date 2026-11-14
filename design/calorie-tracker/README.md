@@ -3,10 +3,27 @@
 Three mobile screens (390x844) for a calorie tracking app, drafted as a Claude
 Design canvas. Not part of the CrossPet firmware — design exploration only.
 
-Direction F is drawn from a screen recording the user supplied and sits on
-canvas page 1. Directions A and B are the earlier shortlist, each in light and
+Directions G and F are drawn from references the user supplied and sit on
+canvas pages 1 and 2. Directions A and B are the earlier shortlist, each in light and
 dark, on page 2. Directions C, D and E are kept for reference on page 3.
 Direction E carries a fourth screen.
+
+## Direction G — "Crave blue"
+
+| File | Screen |
+|------|--------|
+| `CraveHome.dc.html` | Home — radiating bar gauge, macro bars, meal cards |
+| `CraveChat.dc.html` | Crave AI — chat with an inline meal result card |
+| `CraveMeal.dc.html` | Meal details — photo, tags, ring gauges, servings stepper |
+
+White cards on `#F7F8FA`, accent `#2563EB`, Urbanist. Macro colours are purple
+(Carbos), cyan (Protein) and orange (Fat). Signature elements: a semicircular
+speedometer built from 34 radiating rounded bars with a blue gradient across
+the filled portion, a five-tab labelled nav with a raised centre action, an AI
+chat surface with an inline meal card, and four ring gauges on the detail
+screen. Gauge bars, date chips and rings are generated geometry.
+
+The chat screen has no equivalent in any other direction.
 
 ## Direction F — "Lilac"
 

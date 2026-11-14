@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&amp;display=swap">
+  <style>
+    body { margin: 0; font-family: 'Urbanist', 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #2563EB; } a:hover { color: #111827; }
+    .cd { background: #FFFFFF; border-radius: 22px; box-shadow: 0 6px 20px rgba(17,24,39,0.06); }
+  </style>
+</helmet>
+
+<div style="position: relative; width: 390px; height: 844px; overflow: hidden; background: #F7F8FA; color: #111827;">
+
+  <!-- header -->
+  <div style="display: flex; align-items: center; gap: 12px; padding: 22px 20px 0;">
+    <div style="flex-shrink: 0; width: 48px; height: 48px; border-radius: 24px; overflow: hidden; background: #DCE3F0;">
+      <svg viewBox="0 0 48 48" width="48" height="48">
+        <circle cx="24" cy="18" r="9" fill="#3F3A36"></circle>
+        <circle cx="24" cy="20" r="7.4" fill="#E0B291"></circle>
+        <path d="M15.5 16c1-6 16-6 17 0 .4 2.4-1 3-1 3-1-4-14-4-15 0 0 0-1.4-.6-1-3z" fill="#2E2A27"></path>
+        <path d="M11 48c1.5-9 7-12 13-12s11.5 3 13 12z" fill="#2F5FD0"></path>
+        <path d="M19 34.5h10V39a5 5 0 01-10 0z" fill="#E0B291"></path>
+      </svg>
+    </div>
+    <div style="flex-grow: 1;">
+      <div style="font-size: 20px; font-weight: 700; letter-spacing: -0.015em;">Hi Anthony 👋</div>
+      <div style="margin-top: 1px; font-size: 12.5px; font-weight: 500; color: #6B7280;">Here's your day so far</div>
+    </div>
+    <div style="position: relative; flex-shrink: 0; width: 44px; height: 44px; border-radius: 22px; background: #FFFFFF; display: flex; align-items: center; justify-content: center;">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#111827" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 10a5.5 5.5 0 1111 0c0 3.8 1.4 5.2 1.4 5.2H5.1S6.5 13.8 6.5 10z"></path><path d="M10.4 18.6a1.9 1.9 0 003.2 0"></path></svg>
+      <div style="position: absolute; top: 10px; right: 11px; width: 8px; height: 8px; border-radius: 4px; background: #EF4444; border: 1.5px solid #FFFFFF;"></div>
+    </div>
+    <div style="flex-shrink: 0; width: 44px; height: 44px; border-radius: 22px; background: #FFFFFF; display: flex; align-items: center; justify-content: center;">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#111827" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"></circle><path d="M19.4 14.4a1.6 1.6 0 00.3 1.8l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.6 1.6 0 00-2.7 1.1v.2a2 2 0 11-4 0v-.1a1.6 1.6 0 00-2.8-1.1l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.6 1.6 0 00-1.1-2.7h-.2a2 2 0 110-4h.1a1.6 1.6 0 001.1-2.8l-.1-.1a2 2 0 112.8-2.8l.1.1a1.6 1.6 0 002.7-1.1V3a2 2 0 114 0v.1a1.6 1.6 0 002.8 1.1l.1-.1a2 2 0 112.8 2.8l-.1.1a1.6 1.6 0 001.1 2.7h.2a2 2 0 110 4h-.1a1.6 1.6 0 00-1.4.9z"></path></svg>
+    </div>
+  </div>
+
+  <!-- date strip -->
+  <div style="display: flex; gap: 6px; margin: 16px 20px 0;">
+    <div style="flex-grow: 1; flex-basis: 0; height: 58px; border-radius: 20px; background: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;"><div style="font-size: 15px; font-weight: 600; color: #111827;">19</div><div style="font-size: 11px; font-weight: 500; color: #9CA3AF;">Sat</div></div><div style="flex-grow: 1; flex-basis: 0; height: 58px; border-radius: 20px; background: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;"><div style="font-size: 15px; font-weight: 600; color: #111827;">20</div><div style="font-size: 11px; font-weight: 500; color: #9CA3AF;">Sun</div></div><div style="flex-grow: 1; flex-basis: 0; height: 58px; border-radius: 20px; background: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;"><div style="font-size: 15px; font-weight: 600; color: #111827;">21</div><div style="font-size: 11px; font-weight: 500; color: #9CA3AF;">Mon</div></div><div style="flex-grow: 1; flex-basis: 0; height: 58px; border-radius: 20px; background: #2563EB; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;"><div style="font-size: 15px; font-weight: 700; color: #FFFFFF;">22</div><div style="font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.8);">Tue</div></div><div style="flex-grow: 1; flex-basis: 0; height: 58px; border-radius: 20px; background: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;"><div style="font-size: 15px; font-weight: 600; color: #111827;">23</div><div style="font-size: 11px; font-weight: 500; color: #9CA3AF;">Wed</div></div><div style="flex-grow: 1; flex-basis: 0; height: 58px; border-radius: 20px; background: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;"><div style="font-size: 15px; font-weight: 600; color: #111827;">24</div><div style="font-size: 11px; font-weight: 500; color: #9CA3AF;">Thu</div></div><div style="flex-grow: 1; flex-basis: 0; height: 58px; border-radius: 20px; background: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;"><div style="font-size: 15px; font-weight: 600; color: #111827;">25</div><div style="font-size: 11px; font-weight: 500; color: #9CA3AF;">Fri</div></div>
+  </div>
+
+  <!-- daily progress -->
+  <div class="cd" style="margin: 14px 20px 0; padding: 16px;">
+    <div style="display: flex; align-items: baseline; gap: 10px;">
+      <div style="flex-grow: 1; font-size: 16.5px; font-weight: 700; letter-spacing: -0.015em;">Daily Progress</div>
+      <div style="font-size: 15px; font-weight: 700;">1250</div>
+      <div style="font-size: 12.5px; font-weight: 500; color: #9CA3AF;">/ 2000 cal</div>
+    </div>
+
+    <div style="position: relative; height: 172px; margin-top: 10px;">
+      <svg viewBox="0 0 318 172" width="318" height="172" style="position: absolute; left: 0; top: 0;"><path d="M67.1,135.8L37.1,134.4" stroke="#A8C2F2" stroke-width="7" stroke-linecap="round"/><path d="M67.9,127.3L38.2,123.1" stroke="#A4BEF1" stroke-width="7" stroke-linecap="round"/><path d="M69.4,118.9L40.2,112.1" stroke="#A0BBF0" stroke-width="7" stroke-linecap="round"/><path d="M71.8,110.8L43.3,101.2" stroke="#9BB7F0" stroke-width="7" stroke-linecap="round"/><path d="M74.8,102.8L47.4,90.7" stroke="#97B4EF" stroke-width="7" stroke-linecap="round"/><path d="M78.6,95.2L52.4,80.6" stroke="#93B0EE" stroke-width="7" stroke-linecap="round"/><path d="M83.1,88.0L58.4,71.1" stroke="#8FADED" stroke-width="7" stroke-linecap="round"/><path d="M88.2,81.2L65.1,62.1" stroke="#8BA9EC" stroke-width="7" stroke-linecap="round"/><path d="M93.9,74.9L72.7,53.7" stroke="#86A6EC" stroke-width="7" stroke-linecap="round"/><path d="M100.2,69.2L81.1,46.1" stroke="#82A2EB" stroke-width="7" stroke-linecap="round"/><path d="M107.0,64.1L90.1,39.4" stroke="#7E9FEA" stroke-width="7" stroke-linecap="round"/><path d="M114.2,59.6L99.6,33.4" stroke="#7A9BE9" stroke-width="7" stroke-linecap="round"/><path d="M121.8,55.8L109.7,28.4" stroke="#7598E9" stroke-width="7" stroke-linecap="round"/><path d="M129.8,52.8L120.2,24.3" stroke="#7194E8" stroke-width="7" stroke-linecap="round"/><path d="M137.9,50.4L131.1,21.2" stroke="#6D91E7" stroke-width="7" stroke-linecap="round"/><path d="M146.3,48.9L142.1,19.2" stroke="#698DE6" stroke-width="7" stroke-linecap="round"/><path d="M154.8,48.1L153.4,18.1" stroke="#658AE5" stroke-width="7" stroke-linecap="round"/><path d="M163.2,48.1L164.6,18.1" stroke="#6086E5" stroke-width="7" stroke-linecap="round"/><path d="M171.7,48.9L175.9,19.2" stroke="#5C83E4" stroke-width="7" stroke-linecap="round"/><path d="M180.1,50.4L186.9,21.2" stroke="#587FE3" stroke-width="7" stroke-linecap="round"/><path d="M188.2,52.8L197.8,24.3" stroke="#547CE2" stroke-width="7" stroke-linecap="round"/><path d="M196.2,55.8L208.3,28.4" stroke="#5078E1" stroke-width="7" stroke-linecap="round"/><path d="M203.8,59.6L218.4,33.4" stroke="#DCE3F2" stroke-width="7" stroke-linecap="round"/><path d="M211.0,64.1L227.9,39.4" stroke="#DCE3F2" stroke-width="7" stroke-linecap="round"/><path d="M217.8,69.2L236.9,46.1" stroke="#DCE3F2" stroke-width="7" stroke-linecap="round"/><path d="M224.1,74.9L245.3,53.7" stroke="#DCE3F2" stroke-width="7" stroke-linecap="round"/><path d="M229.8,81.2L252.9,62.1" stroke="#DCE3F2" stroke-width="7" stroke-linecap="round"/><path d="M234.9,88.0L259.6,71.1" stroke="#DCE3F2" stroke-width="7" stroke-linecap="round"/><path d="M239.4,95.2L265.6,80.6" stroke="#DCE3F2" stroke-width="7" stroke-linecap="round"/><path d="M243.2,102.8L270.6,90.7" stroke="#DCE3F2" stroke-width="7" stroke-linecap="round"/><path d="M246.2,110.8L274.7,101.2" stroke="#DCE3F2" stroke-width="7" stroke-linecap="round"/><path d="M248.6,118.9L277.8,112.1" stroke="#DCE3F2" stroke-width="7" stroke-linecap="round"/><path d="M250.1,127.3L279.8,123.1" stroke="#DCE3F2" stroke-width="7" stroke-linecap="round"/><path d="M250.9,135.8L280.9,134.4" stroke="#DCE3F2" stroke-width="7" stroke-linecap="round"/></svg>
+      <div style="position: absolute; left: 0; right: 0; top: 56px; text-align: center; font-size: 17px;">🔥</div>
+      <div style="position: absolute; left: 0; right: 0; top: 78px; text-align: center; font-size: 34px; font-weight: 700; letter-spacing: -0.03em; line-height: 1;">1250</div>
+      <div style="position: absolute; left: 0; right: 0; top: 118px; text-align: center; font-size: 12.5px; font-weight: 500; color: #9CA3AF;">Calories</div>
+      <div style="position: absolute; left: 6px; top: 150px; font-size: 11.5px; font-weight: 600; color: #9CA3AF;">0%</div>
+      <div style="position: absolute; right: 6px; top: 150px; font-size: 11.5px; font-weight: 600; color: #9CA3AF;">100%</div>
+    </div>
+
+    <div style="display: flex; gap: 14px; margin-top: 14px;">
+      <div style="flex-grow: 1; flex-basis: 0; text-align: center;">
+        <div><span style="font-size: 14px; font-weight: 700;">60</span><span style="font-size: 12.5px; font-weight: 500; color: #9CA3AF;"> / 250</span></div>
+        <div style="margin-top: 7px; height: 5px; border-radius: 3px; background: #EEF0F4; overflow: hidden;"><div style="width: 24%; height: 5px; border-radius: 3px; background: #7C5CE0;"></div></div>
+        <div style="margin-top: 7px; font-size: 12.5px; font-weight: 500; color: #6B7280;">Carbos</div>
+      </div>
+      <div style="flex-grow: 1; flex-basis: 0; text-align: center;">
+        <div><span style="font-size: 14px; font-weight: 700;">45</span><span style="font-size: 12.5px; font-weight: 500; color: #9CA3AF;"> / 300</span></div>
+        <div style="margin-top: 7px; height: 5px; border-radius: 3px; background: #EEF0F4; overflow: hidden;"><div style="width: 15%; height: 5px; border-radius: 3px; background: #22B8D9;"></div></div>
+        <div style="margin-top: 7px; font-size: 12.5px; font-weight: 500; color: #6B7280;">Protein</div>
+      </div>
+      <div style="flex-grow: 1; flex-basis: 0; text-align: center;">
+        <div><span style="font-size: 14px; font-weight: 700;">12</span><span style="font-size: 12.5px; font-weight: 500; color: #9CA3AF;"> / 40</span></div>
+        <div style="margin-top: 7px; height: 5px; border-radius: 3px; background: #EEF0F4; overflow: hidden;"><div style="width: 30%; height: 5px; border-radius: 3px; background: #F59E42;"></div></div>
+        <div style="margin-top: 7px; font-size: 12.5px; font-weight: 500; color: #6B7280;">Fat</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- section -->
+  <div style="display: flex; align-items: center; gap: 12px; margin: 16px 20px 0;">
+    <div style="flex-grow: 1; font-size: 16.5px; font-weight: 700; letter-spacing: -0.015em;">Today's Meals</div>
+    <div style="font-size: 13px; font-weight: 600; color: {{accent}};">See all</div>
+  </div>
+
+  <!-- meal cards -->
+  <div style="display: flex; gap: 12px; margin: 12px 20px 0;">
+    <div class="cd" style="flex-grow: 1; flex-basis: 0; padding: 10px;">
+      <svg viewBox="0 0 160 112" width="100%" height="112" style="border-radius: 14px; display: block;">
+        <rect width="160" height="112" fill="#E8E4DC"></rect>
+        <circle cx="80" cy="60" r="44" fill="#F6F4EF"></circle>
+        <circle cx="80" cy="60" r="36" fill="#FDFCFA"></circle>
+        <ellipse cx="66" cy="52" rx="13" ry="10" fill="#FFFFFF"></ellipse>
+        <circle cx="66" cy="52" r="5.5" fill="#F3B331"></circle>
+        <path d="M86 44 l16 6 -5 16 -16 -6z" fill="#C98A4B"></path>
+        <circle cx="94" cy="70" r="6" fill="#DE4B3C"></circle>
+        <path d="M60 72 C 68 66, 80 68, 86 76 C 76 82, 64 80, 60 72z" fill="#6FA84B"></path>
+      </svg>
+      <div style="display: flex; align-items: baseline; gap: 8px; margin-top: 10px;">
+        <div style="flex-grow: 1; font-size: 14.5px; font-weight: 700;">Breakfast</div>
+        <div style="font-size: 11px; font-weight: 500; color: #9CA3AF;">8:00am</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 6px; margin-top: 4px;">
+        <div style="font-size: 20px; font-weight: 700; letter-spacing: -0.02em;">420</div>
+        <div style="flex-grow: 1; font-size: 11.5px; font-weight: 500; color: #9CA3AF;">Kcal</div>
+        <div style="display: flex; gap: 2.5px; padding-bottom: 5px;">
+          <div style="width: 3.2px; height: 3.2px; border-radius: 2px; background: #9CA3AF;"></div>
+          <div style="width: 3.2px; height: 3.2px; border-radius: 2px; background: #9CA3AF;"></div>
+          <div style="width: 3.2px; height: 3.2px; border-radius: 2px; background: #9CA3AF;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cd" style="flex-grow: 1; flex-basis: 0; padding: 10px;">
+      <svg viewBox="0 0 160 112" width="100%" height="112" style="border-radius: 14px; display: block;">
+        <rect width="160" height="112" fill="#E4E7EB"></rect>
+        <circle cx="80" cy="60" r="44" fill="#CBD2DA"></circle>
+        <circle cx="80" cy="60" r="36" fill="#F2F4F7"></circle>
+        <rect x="52" y="44" width="34" height="26" rx="5" fill="#C98A4B"></rect>
+        <rect x="56" y="48" width="26" height="18" rx="3" fill="#E0A862"></rect>
+        <ellipse cx="96" cy="58" rx="13" ry="10" fill="#FFFFFF"></ellipse>
+        <circle cx="96" cy="58" r="5.5" fill="#F3B331"></circle>
+        <path d="M62 76 C 72 70, 86 72, 92 80 C 80 86, 68 84, 62 76z" fill="#5E9B45"></path>
+      </svg>
+      <div style="display: flex; align-items: baseline; gap: 8px; margin-top: 10px;">
+        <div style="flex-grow: 1; font-size: 14.5px; font-weight: 700;">Lunch</div>
+        <div style="font-size: 11px; font-weight: 500; color: #9CA3AF;">2:00pm</div>
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 6px; margin-top: 4px;">
+        <div style="font-size: 20px; font-weight: 700; letter-spacing: -0.02em;">650</div>
+        <div style="flex-grow: 1; font-size: 11.5px; font-weight: 500; color: #9CA3AF;">Kcal</div>
+        <div style="display: flex; gap: 2.5px; padding-bottom: 5px;">
+          <div style="width: 3.2px; height: 3.2px; border-radius: 2px; background: #9CA3AF;"></div>
+          <div style="width: 3.2px; height: 3.2px; border-radius: 2px; background: #9CA3AF;"></div>
+          <div style="width: 3.2px; height: 3.2px; border-radius: 2px; background: #9CA3AF;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- bottom nav -->
+  <div style="position: absolute; left: 0; right: 0; bottom: 0; height: 88px; background: #FFFFFF; box-shadow: 0 -4px 20px rgba(17,24,39,0.06); display: flex; align-items: flex-start; justify-content: space-around; padding: 14px 10px 0;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 5px; width: 62px;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="{{accent}}"><path d="M4 11.2L12 4.5l8 6.7V19a1.5 1.5 0 01-1.5 1.5h-13A1.5 1.5 0 014 19z"></path></svg>
+      <div style="font-size: 11.5px; font-weight: 600; color: {{accent}};">Home</div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 5px; width: 62px;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14h16a8 8 0 01-16 0z"></path><path d="M3 18.5h18"></path><path d="M11 6c-1 .8-1 1.8 0 2.6"></path><path d="M15 6c-1 .8-1 1.8 0 2.6"></path></svg>
+      <div style="font-size: 11.5px; font-weight: 500; color: #9CA3AF;">My Meals</div>
+    </div>
+    <div style="width: 62px; display: flex; justify-content: center;">
+      <div style="width: 50px; height: 50px; border-radius: 25px; background: {{accent}}; margin-top: -6px; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 16px rgba(37,99,235,0.35);">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M12 3l1.9 5.3L19 10l-5.1 1.7L12 17l-1.9-5.3L5 10l5.1-1.7z"></path><path d="M18.5 15l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"></path></svg>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 5px; width: 62px;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4"></rect><path d="M7.5 15l3.2-3.8 2.6 2.4 3.2-4.4"></path></svg>
+      <div style="font-size: 11.5px; font-weight: 500; color: #9CA3AF;">Progress</div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 5px; width: 62px;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.6"></circle><circle cx="12" cy="10" r="3"></circle><path d="M6.4 18.2a6.2 6.2 0 0111.2 0"></path></svg>
+      <div style="font-size: 11.5px; font-weight: 500; color: #9CA3AF;">Profile</div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#2563EB","options":["#2563EB","#7C5CE0","#22B8D9","#F59E42"],"section":"Theme"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#2563EB' };
+  }
+}
+</script>
+</body>
+</html>

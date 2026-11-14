@@ -1,6 +1,10 @@
 {
   "pages": [
     {
+      "id": "crave",
+      "name": "G \u2014 Crave blue (from your screenshot)"
+    },
+    {
       "id": "lilac",
       "name": "F \u2014 Lilac (from your recording)"
     },
@@ -14,6 +18,33 @@
     }
   ],
   "artboards": [
+    {
+      "file": "CraveHome.dc.html",
+      "title": "G \u00b7 Home",
+      "page": "crave",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 844
+    },
+    {
+      "file": "CraveChat.dc.html",
+      "title": "G \u00b7 Crave AI chat",
+      "page": "crave",
+      "x": 490,
+      "y": 0,
+      "w": 390,
+      "h": 844
+    },
+    {
+      "file": "CraveMeal.dc.html",
+      "title": "G \u00b7 Meal details",
+      "page": "crave",
+      "x": 980,
+      "y": 0,
+      "w": 390,
+      "h": 844
+    },
     {
       "file": "TodayLilac.dc.html",
       "title": "F \u00b7 Today",
@@ -242,12 +273,20 @@
   ],
   "annotations": [
     {
+      "id": "crave-note",
+      "page": "crave",
+      "x": -330,
+      "y": 40,
+      "w": 250,
+      "text": "G \u2014 Crave blue\n\nFrom the screenshot you sent.\n\nWhite on #F7F8FA, #2563EB accent, Urbanist. Macro colours: purple Carbos, cyan Protein, orange Fat.\n\nSignatures: the radiating bar speedometer, the labelled 5-tab bar with a raised centre action, the AI chat with an inline meal result card, and ring gauges on the detail screen.\n\nThe chat screen is the real differentiator \u2014 none of the other directions have a conversational surface."
+    },
+    {
       "id": "lilac-note",
       "page": "lilac",
       "x": -330,
       "y": 40,
       "w": 250,
-      "text": "F \u2014 Lilac\n\nFrom the screen recording you sent.\n\nLavender ground, white cards, #6C4EE8 accent, black selected pill, Plus Jakarta Sans.\n\nSignatures: the ticked dial, date chips with progress rings, the widget grid with \u2197 buttons, triple-ring donut, striped bar chart with one solid selected bar.\n\nNumbers match the other directions (1,558 of 2,300) so the screens compare like for like."
+      "text": "F \u2014 Lilac\n\nFrom the screen recording you sent.\n\nLavender ground, white cards, #6C4EE8 accent, black selected pill, Plus Jakarta Sans.\n\nSignatures: the ticked dial, date chips with progress rings, the widget grid with \u2197 buttons, triple-ring donut, striped bar chart."
     },
     {
       "id": "a-light",
@@ -292,6 +331,6 @@
   ],
   "launch": {
     "view": "canvas",
-    "page": "lilac"
+    "page": "crave"
   }
 }
