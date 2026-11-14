@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+  <style>
+    body { margin: 0; font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #6C4EE8; } a:hover { color: #15151A; }
+    .arw { position: absolute; right: 12px; top: 12px; width: 32px; height: 32px; border-radius: 16px; background: #F2F1F7; display: flex; align-items: center; justify-content: center; }
+    .card { position: relative; flex-grow: 1; flex-basis: 0; height: 118px; padding: 14px; box-sizing: border-box; border-radius: 22px; background: #FFFFFF; }
+    .lab { font-size: 14.5px; font-weight: 700; letter-spacing: -0.015em; }
+    .val { margin-top: 14px; font-size: 24px; font-weight: 700; letter-spacing: -0.03em; }
+    .cap { margin-top: 2px; font-size: 11.5px; font-weight: 500; color: #86848F; }
+  </style>
+</helmet>
+
+<div style="position: relative; width: 390px; height: 844px; overflow: hidden; background: linear-gradient(180deg, #E2DCF3 0%, #EAE7F5 30%, #F1F0F6 60%, #F4F3F8 100%); color: #1B1B22;">
+
+  <div style="display: flex; align-items: center; gap: 12px; padding: 24px 20px 0;">
+    <div style="flex-grow: 1; font-size: 26px; font-weight: 700; letter-spacing: -0.03em;">Insights</div>
+    <div style="height: 34px; padding: 0 16px; border-radius: 17px; background: #FFFFFF; display: flex; align-items: center; font-size: 13px; font-weight: 600;">Edit</div>
+  </div>
+
+  <!-- streak / weight -->
+  <div style="display: flex; gap: 12px; margin: 18px 20px 0;">
+    <div class="card">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#F0552B"><path d="M13 2c.6 3.4-1.2 4.8-2.6 6.2C9 9.6 7.8 11 7.8 13.4A5.2 5.2 0 0013 18.6c3.3 0 5.6-2.3 5.6-5.6 0-4.6-3.4-8.6-5.6-11z"></path><path d="M10.6 14.2c0 1.6 1 2.6 2.4 2.6s2.4-1 2.4-2.6c0-1.6-1.2-2.8-2-3.8-.8 1-2.8 2.2-2.8 3.8z" fill="#FBB03B"></path></svg>
+        <div class="lab">Streak</div>
+      </div>
+      <div class="val">26 Days</div>
+      <div class="cap">Keep it going!</div>
+      <div class="arw"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#86848F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"></path></svg></div>
+    </div>
+    <div class="card">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5.5" width="17" height="14" rx="3.5"></rect><path d="M8 12.5a4 4 0 018 0"></path><path d="M12 12.5l2.4-2.4"></path></svg>
+        <div class="lab">Weight</div>
+      </div>
+      <div class="val">169.4 lbs</div>
+      <div class="cap">Latest</div>
+      <div class="arw"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#86848F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"></path></svg></div>
+    </div>
+  </div>
+
+  <!-- macros -->
+  <div style="position: relative; height: 170px; margin: 12px 20px 0; padding: 16px; box-sizing: border-box; border-radius: 22px; background: #FFFFFF;">
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1B1B22" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 3.5v8.5h8.5"></path></svg>
+      <div class="lab">Macros</div>
+    </div>
+    <div style="margin-top: 14px; font-size: 11.5px; font-weight: 500; color: #86848F;">Daily Averages</div>
+    <div style="display: flex; flex-direction: column; gap: 7px; margin-top: 8px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <div style="width: 8px; height: 8px; border-radius: 4px; background: {{accent}};"></div>
+        <div style="font-size: 16px; font-weight: 700; letter-spacing: -0.02em;">181g</div>
+        <div style="font-size: 11.5px; font-weight: 600; color: #86848F;">40%</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <div style="width: 8px; height: 8px; border-radius: 4px; background: #F0552B;"></div>
+        <div style="font-size: 16px; font-weight: 700; letter-spacing: -0.02em;">60g</div>
+        <div style="font-size: 11.5px; font-weight: 600; color: #86848F;">30%</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <div style="width: 8px; height: 8px; border-radius: 4px; background: #2EA8E8;"></div>
+        <div style="font-size: 16px; font-weight: 700; letter-spacing: -0.02em;">173g</div>
+        <div style="font-size: 11.5px; font-weight: 600; color: #86848F;">30%</div>
+      </div>
+    </div>
+    <svg width="118" height="118" viewBox="0 0 118 118" style="position: absolute; right: 16px; bottom: 16px;">
+      <circle cx="59" cy="59" r="50" fill="none" stroke="#F0EEF6" stroke-width="9"></circle>
+      <circle cx="59" cy="59" r="38" fill="none" stroke="#F0EEF6" stroke-width="9"></circle>
+      <circle cx="59" cy="59" r="26" fill="none" stroke="#F0EEF6" stroke-width="9"></circle>
+      <circle cx="59" cy="59" r="50" fill="none" stroke="{{accent}}" stroke-width="9" stroke-linecap="round" stroke-dasharray="125.7 314.2" transform="rotate(-90 59 59)"></circle>
+      <circle cx="59" cy="59" r="38" fill="none" stroke="#F0552B" stroke-width="9" stroke-linecap="round" stroke-dasharray="71.6 238.8" transform="rotate(-90 59 59)"></circle>
+      <circle cx="59" cy="59" r="26" fill="none" stroke="#2EA8E8" stroke-width="9" stroke-linecap="round" stroke-dasharray="49.0 163.4" transform="rotate(-90 59 59)"></circle>
+    </svg>
+    <div class="arw"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#86848F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"></path></svg></div>
+  </div>
+
+  <!-- calories / balance -->
+  <div style="display: flex; gap: 12px; margin: 12px 20px 0;">
+    <div class="card">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#F0552B"><path d="M13 2c.6 3.4-1.2 4.8-2.6 6.2C9 9.6 7.8 11 7.8 13.4A5.2 5.2 0 0013 18.6c3.3 0 5.6-2.3 5.6-5.6 0-4.6-3.4-8.6-5.6-11z"></path></svg>
+        <div class="lab">Calories</div>
+      </div>
+      <div class="val">5 Days Met</div>
+      <div class="cap">Daily Goal</div>
+      <div class="arw"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#86848F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"></path></svg></div>
+    </div>
+    <div class="card">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#2255DD"><rect x="3" y="8" width="3.4" height="8" rx="1.4"></rect><rect x="9" y="5" width="6" height="14" rx="2.4"></rect><rect x="17.6" y="8" width="3.4" height="8" rx="1.4"></rect></svg>
+        <div class="lab">Balance</div>
+      </div>
+      <div class="val">89 Cal</div>
+      <div class="cap">Daily Average Deficit</div>
+      <div class="arw"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#86848F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"></path></svg></div>
+    </div>
+  </div>
+
+  <!-- carbs / fat -->
+  <div style="display: flex; gap: 12px; margin: 12px 20px 0;">
+    <div class="card">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c0-6 2-10 7-13-5-1-9 1-11 5"></path><path d="M12 21C12 14 9 10 5 7c4-1 7 1 8 5"></path></svg>
+        <div class="lab">Carbs</div>
+      </div>
+      <div class="val">3 Days Met</div>
+      <div class="cap">Daily Goal</div>
+      <div class="arw"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#86848F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"></path></svg></div>
+    </div>
+    <div class="card">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#F0552B"><rect x="2.5" y="9" width="4" height="6" rx="1.6"></rect><rect x="17.5" y="9" width="4" height="6" rx="1.6"></rect><rect x="6" y="10.4" width="12" height="3.2" rx="1.4"></rect></svg>
+        <div class="lab">Fat</div>
+      </div>
+      <div class="val">89 Cal</div>
+      <div class="cap">4 Days Met</div>
+      <div class="arw"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#86848F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"></path></svg></div>
+    </div>
+  </div>
+
+  <!-- protein / fiber (clipped by nav) -->
+  <div style="display: flex; gap: 12px; margin: 12px 20px 0;">
+    <div class="card">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#F05B9E"><path d="M13.5 2L5 13h5l-1.5 9L18 10h-5.2z"></path></svg>
+        <div class="lab">Protein</div>
+      </div>
+      <div class="val">120 Cal</div>
+      <div class="cap">Daily Average</div>
+    </div>
+    <div class="card">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#2CB67D"><circle cx="12" cy="12" r="4"></circle><path d="M12 2.5l1.8 3.2h-3.6zM12 21.5l-1.8-3.2h3.6zM2.5 12l3.2-1.8v3.6zM21.5 12l-3.2 1.8v-3.6z"></path></svg>
+        <div class="lab">Fiber</div>
+      </div>
+      <div class="val">15g</div>
+      <div class="cap">Daily Average</div>
+    </div>
+  </div>
+
+  <!-- bottom nav -->
+  <div style="position: absolute; left: 20px; right: 20px; bottom: 22px; height: 66px; border-radius: 33px; background: rgba(240,239,244,0.86); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: 0 10px 30px rgba(40,30,80,0.10); display: flex; align-items: center; justify-content: space-around; padding: 0 8px;">
+    <div style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#8B8996" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h11a1 1 0 011 1v14a1 1 0 01-1 1H7z"></path><path d="M7 4H6a1 1 0 00-1 1v14a1 1 0 001 1h1M10 9h5M10 13h3"></path></svg>
+    </div>
+    <div style="width: 50px; height: 50px; border-radius: 25px; background: #15151A; display: flex; align-items: center; justify-content: center;">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="#FFFFFF"><rect x="4" y="12" width="4" height="8" rx="1.4"></rect><rect x="10" y="6" width="4" height="14" rx="1.4"></rect><rect x="16" y="14" width="4" height="6" rx="1.4"></rect></svg>
+    </div>
+    <div style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="#8B8996"><rect x="3" y="6" width="12" height="14" rx="3" transform="rotate(-8 9 13)"></rect><rect x="10" y="5" width="11" height="13" rx="3" fill="#A9A7B4" transform="rotate(8 15.5 11.5)"></rect></svg>
+    </div>
+    <div style="width: 50px; height: 50px; border-radius: 25px; background: {{accent}}; display: flex; align-items: center; justify-content: center;">
+      <div style="width: 26px; height: 26px; border-radius: 13px; background: #FFFFFF; display: flex; align-items: center; justify-content: center;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#6C4EE8","options":["#6C4EE8","#2EA8E8","#F0552B","#2CB67D"],"section":"Theme"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#6C4EE8' };
+  }
+}
+</script>
+</body>
+</html>

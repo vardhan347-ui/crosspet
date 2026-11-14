@@ -1,19 +1,50 @@
 {
   "pages": [
     {
-      "id": "page-1",
+      "id": "lilac",
+      "name": "F \u2014 Lilac (from your recording)"
+    },
+    {
+      "id": "ab",
       "name": "A & B \u2014 light + dark"
     },
     {
-      "id": "page-2",
+      "id": "aside",
       "name": "Set aside (C, D, E)"
     }
   ],
   "artboards": [
     {
+      "file": "TodayLilac.dc.html",
+      "title": "F \u00b7 Today",
+      "page": "lilac",
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 844
+    },
+    {
+      "file": "InsightsLilac.dc.html",
+      "title": "F \u00b7 Insights",
+      "page": "lilac",
+      "x": 490,
+      "y": 0,
+      "w": 390,
+      "h": 844
+    },
+    {
+      "file": "MacroLilac.dc.html",
+      "title": "F \u00b7 Macro detail",
+      "page": "lilac",
+      "x": 980,
+      "y": 0,
+      "w": 390,
+      "h": 844
+    },
+    {
       "file": "Main.dc.html",
       "title": "A light \u00b7 Today",
-      "page": "page-1",
+      "page": "ab",
       "x": 0,
       "y": 0,
       "w": 390,
@@ -22,7 +53,7 @@
     {
       "file": "MealDetail.dc.html",
       "title": "A light \u00b7 Meal detail",
-      "page": "page-1",
+      "page": "ab",
       "x": 490,
       "y": 0,
       "w": 390,
@@ -31,7 +62,7 @@
     {
       "file": "Journal.dc.html",
       "title": "A light \u00b7 Day journal",
-      "page": "page-1",
+      "page": "ab",
       "x": 980,
       "y": 0,
       "w": 390,
@@ -40,7 +71,7 @@
     {
       "file": "TodayGlassNight.dc.html",
       "title": "A dark \u00b7 Today",
-      "page": "page-1",
+      "page": "ab",
       "x": 0,
       "y": 1000,
       "w": 390,
@@ -49,7 +80,7 @@
     {
       "file": "MealDetailGlassNight.dc.html",
       "title": "A dark \u00b7 Meal detail",
-      "page": "page-1",
+      "page": "ab",
       "x": 490,
       "y": 1000,
       "w": 390,
@@ -58,7 +89,7 @@
     {
       "file": "JournalGlassNight.dc.html",
       "title": "A dark \u00b7 Day journal",
-      "page": "page-1",
+      "page": "ab",
       "x": 980,
       "y": 1000,
       "w": 390,
@@ -67,7 +98,7 @@
     {
       "file": "TodayBlue.dc.html",
       "title": "B light \u00b7 Today",
-      "page": "page-1",
+      "page": "ab",
       "x": 0,
       "y": 2000,
       "w": 390,
@@ -76,7 +107,7 @@
     {
       "file": "MealDetailBlue.dc.html",
       "title": "B light \u00b7 Meal detail",
-      "page": "page-1",
+      "page": "ab",
       "x": 490,
       "y": 2000,
       "w": 390,
@@ -85,7 +116,7 @@
     {
       "file": "JournalBlue.dc.html",
       "title": "B light \u00b7 Day journal",
-      "page": "page-1",
+      "page": "ab",
       "x": 980,
       "y": 2000,
       "w": 390,
@@ -94,7 +125,7 @@
     {
       "file": "TodayBlueNight.dc.html",
       "title": "B dark \u00b7 Today",
-      "page": "page-1",
+      "page": "ab",
       "x": 0,
       "y": 3000,
       "w": 390,
@@ -103,7 +134,7 @@
     {
       "file": "MealDetailBlueNight.dc.html",
       "title": "B dark \u00b7 Meal detail",
-      "page": "page-1",
+      "page": "ab",
       "x": 490,
       "y": 3000,
       "w": 390,
@@ -112,7 +143,7 @@
     {
       "file": "JournalBlueNight.dc.html",
       "title": "B dark \u00b7 Day journal",
-      "page": "page-1",
+      "page": "ab",
       "x": 980,
       "y": 3000,
       "w": 390,
@@ -121,7 +152,7 @@
     {
       "file": "TodayDark.dc.html",
       "title": "C \u00b7 Today",
-      "page": "page-2",
+      "page": "aside",
       "x": 0,
       "y": 0,
       "w": 390,
@@ -130,7 +161,7 @@
     {
       "file": "MealDetailDark.dc.html",
       "title": "C \u00b7 Meal detail",
-      "page": "page-2",
+      "page": "aside",
       "x": 490,
       "y": 0,
       "w": 390,
@@ -139,7 +170,7 @@
     {
       "file": "JournalDark.dc.html",
       "title": "C \u00b7 Day journal",
-      "page": "page-2",
+      "page": "aside",
       "x": 980,
       "y": 0,
       "w": 390,
@@ -148,7 +179,7 @@
     {
       "file": "TodayLight.dc.html",
       "title": "D \u00b7 Today",
-      "page": "page-2",
+      "page": "aside",
       "x": 0,
       "y": 1000,
       "w": 390,
@@ -157,7 +188,7 @@
     {
       "file": "MealDetailLight.dc.html",
       "title": "D \u00b7 Meal detail",
-      "page": "page-2",
+      "page": "aside",
       "x": 490,
       "y": 1000,
       "w": 390,
@@ -166,7 +197,7 @@
     {
       "file": "JournalLight.dc.html",
       "title": "D \u00b7 Day journal",
-      "page": "page-2",
+      "page": "aside",
       "x": 980,
       "y": 1000,
       "w": 390,
@@ -175,7 +206,7 @@
     {
       "file": "TodayPlay.dc.html",
       "title": "E \u00b7 Today",
-      "page": "page-2",
+      "page": "aside",
       "x": 0,
       "y": 2000,
       "w": 390,
@@ -184,7 +215,7 @@
     {
       "file": "MealDetailPlay.dc.html",
       "title": "E \u00b7 Meal detail",
-      "page": "page-2",
+      "page": "aside",
       "x": 490,
       "y": 2000,
       "w": 390,
@@ -193,7 +224,7 @@
     {
       "file": "JournalPlay.dc.html",
       "title": "E \u00b7 Day journal",
-      "page": "page-2",
+      "page": "aside",
       "x": 980,
       "y": 2000,
       "w": 390,
@@ -202,7 +233,7 @@
     {
       "file": "CheckInPlay.dc.html",
       "title": "E \u00b7 Check-in",
-      "page": "page-2",
+      "page": "aside",
       "x": 1470,
       "y": 2000,
       "w": 390,
@@ -211,8 +242,16 @@
   ],
   "annotations": [
     {
+      "id": "lilac-note",
+      "page": "lilac",
+      "x": -330,
+      "y": 40,
+      "w": 250,
+      "text": "F \u2014 Lilac\n\nFrom the screen recording you sent.\n\nLavender ground, white cards, #6C4EE8 accent, black selected pill, Plus Jakarta Sans.\n\nSignatures: the ticked dial, date chips with progress rings, the widget grid with \u2197 buttons, triple-ring donut, striped bar chart with one solid selected bar.\n\nNumbers match the other directions (1,558 of 2,300) so the screens compare like for like."
+    },
+    {
       "id": "a-light",
-      "page": "page-1",
+      "page": "ab",
       "x": -320,
       "y": 40,
       "w": 240,
@@ -220,39 +259,39 @@
     },
     {
       "id": "a-dark",
-      "page": "page-1",
+      "page": "ab",
       "x": -320,
       "y": 1040,
       "w": 240,
-      "text": "A \u2014 Lavender glass, dark\n\nDeep plum ground; glass panels drop to 6\u201310% white, the jewel spheres carry unchanged, near-black chips invert to light.\nAccent lifts to #B18BE0."
+      "text": "A \u2014 Lavender glass, dark\n\nDeep plum ground; glass panels drop to 6\u201310% white, near-black chips invert to light.\nAccent lifts to #B18BE0."
     },
     {
       "id": "b-light",
-      "page": "page-1",
+      "page": "ab",
       "x": -320,
       "y": 2040,
       "w": 240,
-      "text": "B \u2014 Trippin blue, light\n\nWhite cards on pale blue, flat vector illustration, gradient pill buttons, navy pill nav.\nArchivo (Helvetica Now stand-in)."
+      "text": "B \u2014 Trippin blue, light\n\nWhite cards on pale blue, flat vector illustration, gradient pill buttons, navy pill nav.\nArchivo."
     },
     {
       "id": "b-dark",
-      "page": "page-1",
+      "page": "ab",
       "x": -320,
       "y": 3040,
       "w": 240,
-      "text": "B \u2014 Trippin blue, dark\n\nMidnight Blue taken all the way down (#0B111F ground, #141D31 cards). Blue Ribbon and Persimmon unchanged."
+      "text": "B \u2014 Trippin blue, dark\n\nMidnight Blue taken all the way down (#0B111F ground, #141D31 cards)."
     },
     {
       "id": "set-aside",
-      "page": "page-2",
+      "page": "aside",
       "x": -320,
       "y": 40,
       "w": 240,
-      "text": "Set aside\n\nC \u2014 Cargo dark (Outfit, lemon yellow)\nD \u2014 Industrial light (Instrument Serif, amber)\nE \u2014 Playful pastel (Poppins, four pastels)\n\nKept for reference."
+      "text": "Set aside\n\nC \u2014 Cargo dark\nD \u2014 Industrial light\nE \u2014 Playful pastel\n\nKept for reference."
     }
   ],
   "launch": {
     "view": "canvas",
-    "page": "page-1"
+    "page": "lilac"
   }
 }

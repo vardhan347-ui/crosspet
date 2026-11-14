@@ -3,9 +3,28 @@
 Three mobile screens (390x844) for a calorie tracking app, drafted as a Claude
 Design canvas. Not part of the CrossPet firmware — design exploration only.
 
-Directions A and B are the shortlist, each in light and dark, on canvas page 1.
-Directions C, D and E are kept for reference on page 2. Direction E carries a
-fourth screen.
+Direction F is drawn from a screen recording the user supplied and sits on
+canvas page 1. Directions A and B are the earlier shortlist, each in light and
+dark, on page 2. Directions C, D and E are kept for reference on page 3.
+Direction E carries a fourth screen.
+
+## Direction F — "Lilac"
+
+| File | Screen |
+|------|--------|
+| `TodayLilac.dc.html` | Today — ticked dial, date chips, macro cards, meal list |
+| `InsightsLilac.dc.html` | Insights — widget grid with triple-ring macro donut |
+| `MacroLilac.dc.html` | Macro detail — segmented range, striped bar chart, stat rows |
+
+Lavender ground (`#DED7F1` to `#F4F3F8`) with white cards, accent `#6C4EE8`,
+black selected pill, Plus Jakarta Sans. Signature elements lifted from the
+reference: a large ticked gauge arc (the leading 68% of ticks carries the
+accent), date chips wrapped in progress rings, widget cards each with a
+circular arrow button, a three-ring macro donut, and a bar chart of striped
+rounded bars with one solid selected bar and a dotted centre line.
+
+Dial ticks and chart bars are generated geometry, embedded in the artboards.
+Food thumbnails are flat SVG rather than the reference's photography.
 
 ## Direction A — "Lavender glass" (shortlisted)
 

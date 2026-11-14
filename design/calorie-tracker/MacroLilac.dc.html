@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+  <style>
+    body { margin: 0; font-family: 'Plus Jakarta Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: #6C4EE8; } a:hover { color: #15151A; }
+    .rowc { display: flex; align-items: center; gap: 12px; height: 64px; padding: 0 18px; border-radius: 20px; background: #FFFFFF; }
+    .rk { flex-grow: 1; font-size: 14px; font-weight: 500; color: #6E6C7B; }
+    .rv { font-size: 15.5px; font-weight: 700; letter-spacing: -0.015em; }
+  </style>
+</helmet>
+
+<div style="position: relative; width: 390px; height: 844px; overflow: hidden; background: linear-gradient(180deg, #DED7F1 0%, #E8E4F4 22%, #F1F0F6 50%, #F4F3F8 100%); color: #1B1B22;">
+
+  <!-- header -->
+  <div style="display: flex; align-items: center; gap: 10px; padding: 24px 20px 0;">
+    <div style="width: 44px; height: 44px; border-radius: 22px; background: rgba(255,255,255,0.72); display: flex; align-items: center; justify-content: center;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1B1B22" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5l-7 7 7 7"></path></svg>
+    </div>
+    <div style="flex-grow: 1;"></div>
+    <div style="width: 44px; height: 44px; border-radius: 22px; background: rgba(255,255,255,0.72); display: flex; align-items: center; justify-content: center;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1B1B22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15.5V4.5M8.5 8L12 4.5 15.5 8"></path><path d="M5.5 14v4.5a1.5 1.5 0 001.5 1.5h10a1.5 1.5 0 001.5-1.5V14"></path></svg>
+    </div>
+    <div style="width: 44px; height: 44px; border-radius: 22px; background: rgba(255,255,255,0.72); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;">
+      <div style="width: 3.6px; height: 3.6px; border-radius: 2px; background: #1B1B22;"></div>
+      <div style="width: 3.6px; height: 3.6px; border-radius: 2px; background: #1B1B22;"></div>
+      <div style="width: 3.6px; height: 3.6px; border-radius: 2px; background: #1B1B22;"></div>
+    </div>
+  </div>
+
+  <!-- segmented -->
+  <div style="display: flex; gap: 8px; margin: 20px 20px 0;">
+    <div style="flex-grow: 1; flex-basis: 0; height: 42px; border-radius: 21px; background: #15151A; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; color: #FFFFFF;">Week</div>
+    <div style="flex-grow: 1; flex-basis: 0; height: 42px; border-radius: 21px; background: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 500; color: #4A4857;">Month</div>
+    <div style="flex-grow: 1; flex-basis: 0; height: 42px; border-radius: 21px; background: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 500; color: #4A4857;">Year</div>
+  </div>
+
+  <!-- summary -->
+  <div style="display: flex; align-items: flex-end; gap: 12px; margin: 12px 20px 0; padding: 16px 18px; border-radius: 20px; background: rgba(255,255,255,0.55);">
+    <div style="flex-grow: 1;">
+      <div style="font-size: 12px; font-weight: 500; color: #7C7A8C;">Carbs &middot; Daily Average</div>
+      <div style="display: flex; align-items: baseline; gap: 8px; margin-top: 3px;">
+        <div style="font-size: 30px; font-weight: 700; letter-spacing: -0.035em; line-height: 1;">181g</div>
+        <div style="display: flex; align-items: center; gap: 3px; font-size: 13px; font-weight: 600; color: #2CB67D;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2CB67D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"></path></svg>3%
+        </div>
+      </div>
+    </div>
+    <div style="font-size: 12.5px; font-weight: 500; color: #7C7A8C;">Mar 26 &ndash; Today</div>
+  </div>
+
+  <!-- chart -->
+  <div style="margin: 14px 20px 0; padding: 18px 10px 12px; border-radius: 24px; background: #FFFFFF;">
+    <svg viewBox="0 0 330 236" width="330" height="236">
+      <defs>
+        <pattern id="stB" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(58)">
+          <rect width="7" height="7" fill="#AEDDF4"></rect>
+          <rect width="3.1" height="7" fill="#CDEAF9"></rect>
+        </pattern>
+      </defs>
+      <path d="M6,56H324" stroke="#EFEDF5" stroke-width="1.4" stroke-dasharray="3 5"/><path d="M6,94H324" stroke="#EFEDF5" stroke-width="1.4" stroke-dasharray="3 5"/><path d="M6,132H324" stroke="#EFEDF5" stroke-width="1.4" stroke-dasharray="3 5"/><path d="M6,170H324" stroke="#EFEDF5" stroke-width="1.4" stroke-dasharray="3 5"/><path d="M6,206H324" stroke="#EFEDF5" stroke-width="1.4" stroke-dasharray="3 5"/><rect x="15.0" y="84" width="28" height="122" rx="14" fill="url(#stB)"/><text x="29.0" y="232" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="500" fill="#8A8796">M</text><rect x="60.5" y="78" width="28" height="128" rx="14" fill="url(#stB)"/><text x="74.5" y="232" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="500" fill="#8A8796">T</text><rect x="106.0" y="56" width="28" height="150" rx="14" fill="#6C4EE8"/><path d="M120.0,68V194" stroke="#FFFFFF" stroke-width="1.6" stroke-dasharray="2 5" stroke-linecap="round" opacity="0.85"/><text x="120.0" y="44" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="700" fill="#6C4EE8">205g</text><text x="120.0" y="232" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="700" fill="#6C4EE8">W</text><rect x="151.5" y="154" width="28" height="52" rx="14" fill="url(#stB)"/><text x="165.5" y="232" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="500" fill="#8A8796">T</text><rect x="197.0" y="96" width="28" height="110" rx="14" fill="url(#stB)"/><text x="211.0" y="232" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="500" fill="#8A8796">F</text><rect x="242.5" y="122" width="28" height="84" rx="14" fill="url(#stB)"/><text x="256.5" y="232" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="500" fill="#8A8796">S</text><rect x="288.0" y="110" width="28" height="96" rx="14" fill="url(#stB)"/><text x="302.0" y="232" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-size="12.5" font-weight="500" fill="#8A8796">S</text>
+    </svg>
+  </div>
+
+  <!-- rows -->
+  <div style="display: flex; flex-direction: column; gap: 10px; margin: 14px 20px 0;">
+    <div class="rowc"><div class="rk">Goal Met</div><div class="rv">4 Days Met</div></div>
+    <div class="rowc"><div class="rk">Rolling Average</div><div class="rv">7 Days</div></div>
+    <div class="rowc"><div class="rk">Best Day</div><div class="rv">Wednesday</div></div>
+    <div class="rowc"><div class="rk">Lowest Day</div><div class="rv">Thursday</div></div>
+  </div>
+
+</div>
+</x-dc>
+
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#6C4EE8","options":["#6C4EE8","#2EA8E8","#F0552B","#2CB67D"],"section":"Theme"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#6C4EE8' };
+  }
+}
+</script>
+</body>
+</html>
